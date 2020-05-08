@@ -1,0 +1,139 @@
+.drag_handle {
+    -webkit-app-region: drag;
+    cursor: pointer;
+}
+
+button, .no-drag {
+    -webkit-app-region: no-drag;
+}
+
+.loader {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    margin: -75px 0 0 -75px;
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #26cad3;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+
+.main_loader {
+}
+
+.image_loader {
+    width: 150px;
+    height: 150px;
+}
+
+/*.spin {*/
+/*    animation: spin 1s infinite linear*/
+/*}*/
+
+/*@-webkit-keyframes spin {*/
+/*    0% {*/
+/*        -webkit-transform: rotate(0deg);*/
+/*    }*/
+/*    100% {*/
+/*        -webkit-transform: rotate(360deg);*/
+/*    }*/
+/*}*/
+
+/*@keyframes spin {*/
+/*    0% {*/
+/*        transform: rotate(0deg);*/
+/*    }*/
+/*    100% {*/
+/*        transform: rotate(360deg);*/
+/*    }*/
+/*}*/
+
+.txt {
+    white-space: pre-wrap;
+}
+
+.away {
+    background-color: orange !important;
+}
+
+.always {
+    background-color: black !important;
+}
+
+.language {
+    position: absolute;
+    right: 0;
+    margin: 10px;
+}
+
+.func {
+    position: absolute;
+    bottom: 0;
+    width: 100%
+}
+
+/*@media screen and (min-width: 961px) {*/
+/*    .msn .wrapper .container .msgs .msgs_view { transition: none !important; }*/
+/*    .msn .msg_opt { transition: none !important; }*/
+/*}*/
+
+/*!* media: 2st *!*/
+/*@media screen and (max-width: 960px) {*/
+/*    .msn.on .wrapper .container .msgs .msgs_view  { transition: none !important; }*/
+/*    .msn.off .wrapper .container .msgs .msgs_view  { transition: none !important; }*/
+/*    .msn.on .msg_opt { transition: none !important; }*/
+/*    .msn.off .msg_opt { transition: none !important; }*/
+/*}*/
+
+/*!* media: 1st *!*/
+/*@media screen and (max-width: 660px) {*/
+/*    .msn .wrapper .container .msgs .msgs_view { transition: none !important; }*/
+/*    .msn .wrapper .container .msgs .msgs_view.on { transition: none !important; }*/
+/*    .msn .msg_opt { transition: none !important; }*/
+/*    .msn.list .container .msgs { transition: none !important; }*/
+/*    .msn.list .msg_opt { transition: none !important; }*/
+/*}*/
+
+.link:hover {
+    text-decoration: underline;
+}
+
+.img_attach {
+    width: 150px;
+}
+
+/*.wrap_list::-webkit-scrollbar,*/
+/*.msgs_view_body::-webkit-scrollbar {*/
+/*width: 12px;*/
+/*}*/
+/*.wrap_list::-webkit-scrollbar,*/
+/*.wrap_list::-webkit-scrollbar-thumb,*/
+/*.msgs_view_body::-webkit-scrollbar,*/
+/*.msgs_view_body::-webkit-scrollbar-thumb {*/
+/*overflow:visible;*/
+/*border-radius: 4px;*/
+/*}*/
+/*.cover-bar {*/
+/*position: absolute;*/
+/*background: #fff;;*/
+/*height: 100%;*/
+/*top: 0;*/
+/*right: 0;*/
+/*width: 12px;*/
+/*opacity: 1;*/
+/*visibility: visible;*/
+/*-webkit-transition: all .5s;*/
+/*}*/
+/*.msgs_list:hover .cover-bar, .msgs_view:hover .cover-bar {*/
+/*opacity: 0;*/
+/*visibility: hidden;*/
+/*-webkit-transition: all .5s;*/
+/*}*/
+
+/*.msgs_list > .cover-bar {*/
+/*top: 55px;*/
+/*}*/

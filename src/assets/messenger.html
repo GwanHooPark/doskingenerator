@@ -1,0 +1,2526 @@
+<div style="width:1024px">
+    <div class="msn on">
+        <div class="header">
+            <div class="loadbar"></div>
+            <h1>
+                <img src="../assets/skin/images/logo.png" alt=""><span class="txt">DaouOffice</span>
+            </h1>
+            <div class="win_func">
+                <input class="range_trans" type="range" min="1" max="100" title="투명도">
+                <a class="btn_win_min" href="" title="최소화">
+                    <span class="ic ic_win_min"></span>
+                </a>
+                <a class="btn_win_max" href="" title="최대화">
+                    <span class="ic ic_win_max"></span>
+                </a>
+                <a class="btn_win_prev" href="" title="이전 크기로 복원">
+                    <span class="ic ic_win_prev"></span>
+                </a>
+                <a class="btn_win_close" href="" title="닫기">
+                    <span class="ic ic_win_close"></span>
+                </a>
+            </div>
+            <div class="dragBar_x"></div>
+            <div class="dragBar_y"></div>
+        </div>
+        <div class="filebox_result"></div>
+        <div class="wrapper">
+            <div class="layer_modal blind"></div>
+            <div class="wrap_gnb" :style="{'background': getSideBarColor}">
+                <a class="photo" href="#">
+                    <img title="이경희 선임연구원" src="../assets/skin/images/photo_profile.jpg" data-pin-nopin="true" alt="">
+                </a>
+                <ul class="gnb">
+                    <li class="on">
+                        <a href="" title="Today" :style="{'background': getSideBarHoverColor}">
+                            <span class="ic ic_nav_today"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" title="메시지">
+                            <span class="ic ic_nav_message"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" title="첨부파일">
+                            <span class="ic ic_nav_file"></span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="gnb_more">
+                    <li class="gnb_notice">
+                        <a class="" href="">
+                            <span class="ic ic_gnb_notiTalk" title="공지톡"></span>
+                            <span class="ic ic_push"></span>
+                        </a>
+                    </li>
+                    <li class="gnb_organization">
+                        <a href="">
+                            <span class="ic ic_gnb_organization" title="조직도"></span>
+                        </a>
+                        <!-- 레이어 : 조직도 -->
+                        <div class="layer layer_oganization blind">
+                            <div class="search">
+                                <input type="textbox" placeholder="이름, 부서, 직위, 전화번호 검색">
+                                <span class="ic ic_search" title="대화 검색">검색</span>
+                            </div>
+                            <div class="container"><ul class="list list_oganization"><li class="wrap_profile" style="display: block;"><div class="tit" data-button-type="isProfileFolded" role="presentation"><span class="txt">내 프로필</span><span class="ic ic_arrow up" title="접기"></span></div><ul class="list" style="display: block;"><li data-id="m_1105"><div class="member" data-node-type="member" draggable="true" data-org-type="tree" role="presentation"><a class="photo" data-node-type="member" role="presentation"><div><div class="group_bg" style="background: rgb(49, 211, 39); display: none;"></div><img title="이승진 차장" src="https://portal.daou.co.kr/thumb/user/small/507263-71873" alt="" style=""></div><span class=""></span></a><div class="info"><div class="main"><span class="name" title="이승진 차장">이승진 차장</span></div></div></div></li></ul></li><li class="wrap_favor" style="display: block;"><div class="tit" data-button-type="isFavoriteFolded" role="presentation"><span class="txt">즐겨찾기</span><span class="count">4</span><span class="ic ic_arrow down" title="펼치기"></span></div><ul class="list" style="display: none;"><li data-id="m_1130"><div class="member" data-node-type="member" draggable="true" data-org-type="tree" role="presentation"><a class="photo" data-node-type="member" role="presentation"><div><div class="group_bg" style="background: rgb(241, 110, 248); display: none;"></div><img title="김상우 과장" src="https://portal.daou.co.kr/thumb/user/small/490957-80357" alt="" style=""></div><span class="ic ic_master"></span></a><div class="info"><div class="main"><span class="name" title="김상우 과장">김상우 과장</span></div></div><span class="ic ic_state_on" data-always-online="true" title="메신저 접속중"></span></div></li><li data-id="m_4332"><div class="member" data-node-type="member" draggable="true" data-org-type="tree" role="presentation"><a class="photo" data-node-type="member" role="presentation"><div><div class="group_bg" style="background: rgb(119, 200, 87); display: none;"></div><img title="김지영 사원" src="https://portal.daou.co.kr/thumb/user/small/681478-128092" alt="" style=""></div><span class=""></span></a><div class="info"><div class="main"><span class="name" title="김지영 사원">김지영 사원</span></div></div><span class="ic ic_state_on" data-always-online="true" title="메신저 접속중"></span></div></li><li data-id="m_4212"><div class="member" data-node-type="member" draggable="true" data-org-type="tree" role="presentation"><a class="photo" data-node-type="member" role="presentation"><div><div class="group_bg" style="background: rgb(103, 38, 180); display: none;"></div><img title="박찬욱 차장" src="https://portal.daou.co.kr/thumb/user/small/490941-74822" alt="" style=""></div><span class=""></span></a><div class="info"><div class="main"><span class="name" title="박찬욱 차장">박찬욱 차장</span></div></div><span class="ic ic_state_on" data-always-online="true" title="메신저 접속중"></span></div></li><li data-id="m_1101"><div class="member" data-node-type="member" draggable="true" data-org-type="tree" role="presentation"><a class="photo" data-node-type="member" role="presentation"><div><div class="group_bg" style="background: rgb(134, 187, 252); display: none;"></div><img title="손영은 과장" src="https://portal.daou.co.kr/thumb/user/small/490939-82967" alt="" style=""></div><span class=""></span></a><div class="info"><div class="main"><span class="name" title="손영은 과장">손영은 과장</span></div></div><span class="ic ic_state_on" data-always-online="true" title="메신저 접속중"></span></div></li></ul></li><li class="wrap_oganization"><div class="tit" data-button-type="isOrgFolded" role="presentation"><span class="txt">조직도</span><span class="ic ic_arrow up" title="접기"></span></div><div style="display: block;"><div><div style="display: block;"><ul class="list list_oganization depth"><li data-id="m_4100"><div class="member" data-node-type="member" draggable="true" data-org-type="tree" role="presentation"><a class="photo" data-node-type="member" role="presentation"><div><div class="group_bg" style="background: rgb(70, 70, 70); display: none;"></div><img title="김윤덕 사장" src="https://portal.daou.co.kr/thumb/user/small/747362-20947" alt="" style=""></div><span class="ic ic_master"></span></a><div class="info"><div class="main"><span class="name" title="김윤덕 사장">김윤덕 사장</span></div><div class="sub" title="사장,다우기술 대표이사,070-8707-1010,010-6344-2207">사장<span class="part">|</span>다우기술 대표이사<span class="part">|</span>070-8707-1010<span class="part">|</span>010-6344-2207</div></div><span class="ic ic_state_off" title="메신저 로그오프"></span></div></li><li data-id="15"><div class="subject on" draggable="true" data-id="15" data-node-type="department" data-org-type="tree" role="presentation"><span class="ic ic_arrow flat slim_up" role="presentation"></span><span class="txt" title="Service부문(211)">Service부문(211)</span></div><ul class="list"><li data-id="m_2531"><div class="member" data-node-type="member" draggable="true" data-org-type="tree" role="presentation"><a class="photo" data-node-type="member" role="presentation"><div><div class="group_bg" style="background: rgb(174, 38, 180); display: none;"></div><img title="황보순 전무" src="https://portal.daou.co.kr/thumb/user/small/276499-352594" alt="" style=""></div><span class="ic ic_master"></span></a><div class="info"><div class="main"><span class="name" title="황보순 전무">황보순 전무</span></div></div><span class="ic ic_state_on away" data-always-online="false" title="자리비움"></span></div></li><li data-id="99"><div class="subject" draggable="true" data-id="99" data-node-type="department" data-org-type="tree" role="presentation"><span class="ic ic_arrow flat slim_up" role="presentation"></span><span class="txt" title="서비스개발본부(79)">서비스개발본부(79)</span></div><ul class="list"><li data-id="m_1019"><div class="member" data-node-type="member" draggable="true" data-org-type="tree" role="presentation"><a class="photo" data-node-type="member" role="presentation"><div><div class="group_bg" style="background: rgb(61, 38, 180); display: none;"></div><img title="권순진 상무보" src="https://portal.daou.co.kr/thumb/user/small/23273-730369" alt="" style=""></div><span class="ic ic_master"></span></a><div class="info"><div class="main"><span class="name" title="권순진 상무보">권순진 상무보</span></div></div><span class="ic ic_state_on away" data-always-online="false" title="자리비움"></span></div></li><li data-id="670"><div class="subject" draggable="true" data-id="670" data-node-type="department" data-org-type="tree" role="presentation"><span class="ic ic_arrow flat slim_down" role="presentation"></span><span class="txt" title="시스템개발부(22)">시스템개발부(22)</span></div></li><li data-id="671"><div class="subject" draggable="true" data-id="671" data-node-type="department" data-org-type="tree" role="presentation"><span class="ic ic_arrow flat slim_down" role="presentation"></span><span class="txt" title="인프라기술부(21)">인프라기술부(21)</span></div></li><li data-id="543"><div class="subject" draggable="true" data-id="543" data-node-type="department" data-org-type="tree" role="presentation"><span class="ic ic_arrow flat slim_down" role="presentation"></span><span class="txt" title="사방넷개발팀(11)">사방넷개발팀(11)</span></div></li><li data-id="200"><div class="subject" draggable="true" data-id="200" data-node-type="department" data-org-type="tree" role="presentation"><span class="ic ic_arrow flat slim_down" role="presentation"></span><span class="txt" title="웹서비스개발팀(12)">웹서비스개발팀(12)</span></div></li><li data-id="311"><div class="subject" draggable="true" data-id="311" data-node-type="department" data-org-type="tree" role="presentation"><span class="ic ic_arrow flat slim_down" role="presentation"></span><span class="txt" title="서비스디자인팀(9)">서비스디자인팀(9)</span></div></li><li data-id="146"><div class="subject" draggable="true" data-id="146" data-node-type="department" data-org-type="tree" role="presentation"><span class="ic ic_arrow flat slim_up" role="presentation"></span><span class="txt" title="애플리케이션디자인팀(3)">애플리케이션디자인팀(3)</span></div><ul class="list"><li data-id="m_1044"><div class="member" data-node-type="member" draggable="true" data-org-type="tree" role="presentation"><a class="photo" data-node-type="member" role="presentation"><div><div class="group_bg" style="background: rgb(98, 236, 236); display: none;"></div><img title="이경희 차장" src="https://portal.daou.co.kr/thumb/user/small/496268-175374" alt="" style=""></div><span class="ic ic_master"></span></a><div class="info"><div class="main"><span class="name" title="이경희 차장">이경희 차장</span></div></div><span class="ic ic_state_on away" data-always-online="false" title="자리비움"></span></div></li><li data-id="m_1105"><div class="member" data-node-type="member" draggable="true" data-org-type="tree" role="presentation"><a class="photo" data-node-type="member" role="presentation"><div><div class="group_bg" style="background: rgb(49, 211, 39); display: none;"></div><img title="이승진 차장" src="https://portal.daou.co.kr/thumb/user/small/507263-71873" alt="" style=""></div><span class=""></span></a><div class="info"><div class="main"><span class="name" title="이승진 차장">이승진 차장</span></div></div></div></li><li data-id="m_1942"><div class="member" data-node-type="member" draggable="true" data-org-type="tree" role="presentation"><a class="photo" data-node-type="member" role="presentation"><div><div class="group_bg" style="background: rgb(49, 211, 39); display: none;"></div><img title="이경욱 대리" src="https://portal.daou.co.kr/thumb/user/small/491165-64504" alt="" style=""></div><span class=""></span></a><div class="info"><div class="main"><span class="name" title="이경욱 대리">이경욱 대리</span></div></div><span class="ic ic_state_on away" data-always-online="false" title="자리비움"></span></div></li></ul></li></ul></li><li data-id="375"><div class="subject" draggable="true" data-id="375" data-node-type="department" data-org-type="tree" role="presentation"><span class="ic ic_arrow flat slim_down" role="presentation"></span><span class="txt" title="비즈메세징사업본부(38)">비즈메세징사업본부(38)</span></div></li><li data-id="96"><div class="subject" draggable="true" data-id="96" data-node-type="department" data-org-type="tree" role="presentation"><span class="ic ic_arrow flat slim_down" role="presentation"></span><span class="txt" title="비즈마케팅사업본부(24)">비즈마케팅사업본부(24)</span></div></li><li data-id="93"><div class="subject" draggable="true" data-id="93" data-node-type="department" data-org-type="tree" role="presentation"><span class="ic ic_arrow flat slim_down" role="presentation"></span><span class="txt" title="커머스사업본부(51)">커머스사업본부(51)</span></div></li><li data-id="662"><div class="subject" draggable="true" data-id="662" data-node-type="department" data-org-type="tree" role="presentation"><span class="ic ic_arrow flat slim_down" role="presentation"></span><span class="txt" title="고객지원실(18)">고객지원실(18)</span></div></li></ul></li><li data-id="14"><div class="subject" draggable="true" data-id="14" data-node-type="department" data-org-type="tree" role="presentation"><span class="ic ic_arrow flat slim_down" role="presentation"></span><span class="txt" title="ITS부문(214)">ITS부문(214)</span></div></li><li data-id="28"><div class="subject" draggable="true" data-id="28" data-node-type="department" data-org-type="tree" role="presentation"><span class="ic ic_arrow flat slim_down" role="presentation"></span><span class="txt" title="Biz Application사업본부(44)">Biz Application사업본부(44)</span></div></li><li data-id="69"><div class="subject" draggable="true" data-id="69" data-node-type="department" data-org-type="tree" role="presentation"><span class="ic ic_arrow flat slim_down" role="presentation"></span><span class="txt" title="Staff(15)">Staff(15)</span></div></li><li data-id="17"><div class="subject" draggable="true" data-id="17" data-node-type="department" data-org-type="tree" role="presentation"><span class="ic ic_arrow flat slim_down" role="presentation"></span><span class="txt" title="S/W 연구소(40)">S/W 연구소(40)</span></div></li><li data-id="710"><div class="subject" draggable="true" data-id="710" data-node-type="department" data-org-type="tree" role="presentation"><span class="ic ic_arrow flat slim_down" role="presentation"></span><span class="txt" title="전략기획본부(9)">전략기획본부(9)</span></div></li><li data-id="18"><div class="subject" draggable="true" data-id="18" data-node-type="department" data-org-type="tree" role="presentation"><span class="ic ic_arrow flat slim_down" role="presentation"></span><span class="txt" title="경영지원본부(43)">경영지원본부(43)</span></div></li><li data-id="422"><div class="subject" draggable="true" data-id="422" data-node-type="department" data-org-type="tree" role="presentation"><span class="ic ic_arrow flat slim_down" role="presentation"></span><span class="txt" title="중국사업팀(0)">중국사업팀(0)</span></div></li></ul></div><ul class="list list_oganization depth" style="display: none;"></ul></div></div></li></ul></div>
+                            <span class="tail tail_i right">
+                                        <span class="tail tail_i right"></span>
+                                    </span>
+                        </div>
+                        <!-- //조직도 -->
+                    </li>
+                    <li>
+                        <a class="" href="">
+                            <span class="ic ic_gnb_menu" title="메뉴"></span>
+                        </a>
+                        <!-- 레이어: 메뉴 -->
+                        <div class="layer layer_quick blind">
+                            <div class="container">
+                                <ul class="list_quick">
+                                    <li>
+                                        <a href="#">
+                                            <span class="ic ic_m_home"></span>
+                                            <span class="txt">홈</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="ic ic_m_mail"></span>
+                                            <span class="txt">메일</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="ic ic_m_contact"></span>
+                                            <span class="txt">주소록</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="ic ic_m_works"></span>
+                                            <span class="txt">Works</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="ic ic_m_board"></span>
+                                            <span class="txt">게시판</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="ic ic_m_calendar"></span>
+                                            <span class="txt">캘린더</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="ic ic_m_community"></span>
+                                            <span class="txt">커뮤니티</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="ic ic_m_asset"></span>
+                                            <span class="txt">예약</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="ic ic_m_approval"></span>
+                                            <span class="txt">전자결재</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="ic ic_m_report"></span>
+                                            <span class="txt">보고</span>
+                                        </a>
+                                    </li>
+                                    <li class="">
+                                        <a href="#">
+                                            <span class="ic ic_m_task"></span>
+                                            <span class="txt">업무</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="ic ic_m_survey"></span>
+                                            <span class="txt">설문</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="ic ic_m_todo"></span>
+                                            <span class="txt">ToDo</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="ic ic_m_file"></span>
+                                            <span class="txt">자료실</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="ic ic_m_docs"></span>
+                                            <span class="txt">문서관리</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="ic ic_m_etc"></span>
+                                            <span class="txt">기타</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="ic ic_m_docfolder"></span>
+                                            <span class="txt">전사문서함</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="ic ic_m_attendance"></span>
+                                            <span class="txt">근태관리</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <span class="tail tail_i right">
+                                        <span class="tail tail_i right"></span>
+                                    </span>
+                        </div>
+                        <!-- //레이어: 메뉴 -->
+                    </li>
+                    <li>
+                        <a class="" href="">
+                            <span class="ic ic_gnb_noti" title="알림"></span>
+                            <span class="ic ic_push"></span>
+                        </a>
+                        <div class="layer layer_alarm blind">
+                            <div class="container">
+                                <div class="scroll_y wrap_list_alarm">
+                                    <div class="data_null">알림이 없습니다.</div>
+                                    <ul class="list list_alarm">
+                                        <li>
+                                            <a class="photo" href="#">
+                                                <img title="이경희 선임연구원" src="../assets/skin/images/photo_profile.jpg" data-pin-nopin="true" alt="">
+                                            </a>
+                                            <div class="info">
+                                                <div class="main">
+                                                    <strong>승진옹 선임연구원</strong>님이 캘린더에 새로운 일정을 많이 추가했습니다 많이 추가했습니다
+                                                </div>
+                                                <div class="sub">
+                                                    <span class="date">오후 5:30</span>
+                                                </div>
+                                            </div>
+                                            <div class="optional">
+                                                <button type="button" class="wrap_btn" title="삭제">
+                                                    <span class="ic ic_x_s"></span>
+                                                </button>
+                                            </div>
+                                        </li>
+                                        <li class="read">
+                                            <a class="photo" href="#">
+                                                <img title="이경희 선임연구원" src="../assets/skin/images/photo_profile.jpg" data-pin-nopin="true" alt="">
+                                            </a>
+                                            <div class="info">
+                                                <div class="main">
+                                                    <strong>승진옹 선임연구원</strong>님이 캘린더에 새로운 일정을 많이 추가했습니다
+                                                </div>
+                                                <div class="sub">
+                                                    <span class="date">오후 5:30</span>
+                                                </div>
+                                            </div>
+                                            <div class="optional">
+                                                <button type="button" class="wrap_btn" title="삭제">
+                                                    <span class="ic ic_x_s"></span>
+                                                </button>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a class="photo" href="#">
+                                                <img title="이경희 선임연구원" src="../assets/skin/images/photo_profile.jpg" data-pin-nopin="true" alt="">
+                                            </a>
+                                            <div class="info">
+                                                <div class="main">
+                                                    <strong>승진옹 선임연구원</strong>님이 캘린더에 새로운 일정을 많이 추가했습니다
+                                                </div>
+                                                <div class="sub">
+                                                    <span class="date">오후 5:30</span>
+                                                </div>
+                                            </div>
+                                            <div class="optional">
+                                                <button type="button" class="wrap_btn" title="삭제">
+                                                    <span class="ic ic_x_s"></span>
+                                                </button>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a class="photo" href="#">
+                                                <img title="이경희 선임연구원" src="../assets/skin/images/photo_profile.jpg" data-pin-nopin="true" alt="">
+                                            </a>
+                                            <div class="info">
+                                                <div class="main">
+                                                    <strong>승진옹 선임연구원</strong>님이 캘린더에 새로운 일정을 많이 추가했습니다
+                                                </div>
+                                                <div class="sub">
+                                                    <span class="date">오후 5:30</span>
+                                                </div>
+                                            </div>
+                                            <div class="optional">
+                                                <button type="button" class="wrap_btn" title="삭제">
+                                                    <span class="ic ic_x_s"></span>
+                                                </button>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a class="photo" href="#">
+                                                <img title="이경희 선임연구원" src="../assets/skin/images/photo_profile.jpg" data-pin-nopin="true" alt="">
+                                            </a>
+                                            <div class="info">
+                                                <div class="main">
+                                                    <strong>승진옹 선임연구원</strong>님이 캘린더에 새로운 일정을 많이 추가했습니다
+                                                </div>
+                                                <div class="sub">
+                                                    <span class="date">오후 5:30</span>
+                                                </div>
+                                            </div>
+                                            <div class="optional">
+                                                <button type="button" class="wrap_btn" title="삭제">
+                                                    <span class="ic ic_x_s"></span>
+                                                </button>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a class="photo" href="#">
+                                                <img title="이경희 선임연구원" src="../assets/skin/images/photo_profile.jpg" data-pin-nopin="true" alt="">
+                                            </a>
+                                            <div class="info">
+                                                <div class="main">
+                                                    <strong>승진옹 선임연구원</strong>님이 캘린더에 새로운 일정을 많이 추가했습니다
+                                                </div>
+                                                <div class="sub">
+                                                    <span class="date">오후 5:30</span>
+                                                </div>
+                                            </div>
+                                            <div class="optional">
+                                                <button type="button" class="wrap_btn" title="삭제">
+                                                    <span class="ic ic_x_s"></span>
+                                                </button>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="menu_alarm">
+                                    <div class="critical">
+                                        <button type="button" class="wrap_btn btn_gear" href="">
+                                            <span class="ic ic_gear" title="설정"></span>
+                                        </button>
+                                    </div>
+                                    <div class="optional">
+                                        <button type="button">전체 읽음</button>
+                                        <button type="button">전체 삭제</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="tail tail_i right">
+                                        <span class="tail tail_i right"></span>
+                                    </span>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="" href="">
+                            <span class="ic ic_gnb_setting" title="환경설정"></span>
+                        </a>
+                        <!-- 레이어: 메뉴 -->
+                        <div class="layer layer_menu blind">
+                            <div class="container">
+                                <ul class="list nude">
+                                    <li>
+                                        <a class="m_set" href="#">환경설정</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">메뉴2</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">메뉴3</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">메뉴4</a>
+                                    </li>
+                                </ul>
+                                <span class="tail tail_i right">
+                                            <span class="tail tail_i right"></span>
+                                        </span>
+                            </div>
+                        </div>
+                        <!-- //레이어: 메뉴 -->
+                    </li>
+                </ul>
+            </div>
+            <div class="container on">
+                <!--  today -->
+                <div class="wrap_today blind">
+                    <div class="update">
+                        <button class="btn_refresh" type="button" title="새로고침">
+                            <span class="ic ic_refresh"></span>
+                        </button>
+                        <span class="txt">마지막 업데이트</span>
+                        <span class="date">2017-12-12 09:00</span>
+                    </div>
+                    <!-- mail -->
+                    <div class="today mail">
+                        <span class="ic ic_today_mail"></span>
+                        <span class="line"></span>
+                        <span class="tit">메일</span>
+                        <div class="box">
+                            <p class="data_null">
+                                <span class="txt">안읽은 메일이 없습니다.</span>
+                            </p>
+                            <ul class="list">
+                                <li>
+                                    <a class="subject" href="#">
+                                        <span class="txt">결재 제목입니다.</span>
+                                        <div class="info">
+                                            <span class="txt name els">승진옹</span>
+                                            <span class="part">|</span>
+                                            <span class="txt">2시간전</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="subject" href="#">
+                                        <span class="txt">결재 제목이 길어질 경우 멀티라인 됩니다. 결재 제목이 길어질 경우 멀티라인 됩니다.결재 제목이 길어질 경우 멀티라인 됩니다.결재 제목이 길어질 경우 멀티라인 됩니다.결재 제목이 길어질 경우 멀티라인 됩니다.</span>
+                                        <div class="info">
+                                            <span class="txt name els">이름이 길어질 경우 연출입니다</span>
+                                            <span class="part">|</span>
+                                            <span class="txt">17-11-21 12:04</span>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="box_footer">
+                                        <span class="wrap_btn">
+                                            <a class="btn_round" href="">
+                                                <span class="ic ic_round_move"></span>
+                                                <span class="txt">메일로 이동</span>
+                                            </a>
+                                            <a class="btn_round" href="">
+                                                <span class="ic ic_round_add"></span>
+                                                <span class="txt">메일쓰기</span>
+                                            </a>
+                                        </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- board -->
+                    <div class="today board">
+                        <span class="ic ic_today_board"></span>
+                        <span class="line"></span>
+                        <span class="tit">게시판</span>
+                        <div class="box">
+                            <p class="data_null">
+                                <span class="txt">게시물이 없습니다.</span>
+                            </p>
+                            <ul class="list">
+                                <li>
+                                    <a class="subject" href="#">
+                                        <div class="category">
+                                            <span class="txt name els">(주)다우기술</span>
+                                            <span class="part">&gt;</span>
+                                            <span class="txt">사내공지</span>
+                                        </div>
+                                        <span class="txt">내용내용내용내용내용</span>
+                                        <div class="info">
+                                            <span class="txt name els">승진옹</span>
+                                            <span class="part">|</span>
+                                            <span class="txt">2시간전</span>
+                                        </div>
+                                    </a>
+                                    <a class="photo" href="#">
+                                        <img title="이경희 선임연구원" src="../assets/skin/images/photo_profile.jpg" data-pin-nopin="true" alt="">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="subject" href="#">
+                                        <div class="category">
+                                            <span class="txt name els">카테고리 명이 긴 경우 입니다</span>
+                                            <span class="part">&gt;</span>
+                                            <span class="txt">카테고리 명이 긴 경우 입니다</span>
+                                        </div>
+                                        <span class="txt">제목이 긴 경우 멀티라인 됩니다 제목이 긴 경우 멀티라인 됩니다제목이 긴 경우 멀티라인 됩니다제목이 긴 경우 멀티라인 됩니다</span>
+                                        <div class="info">
+                                            <span class="txt name els">이름이 길어질 경우입니다</span>
+                                            <span class="part">|</span>
+                                            <span class="txt">17-11-21 12:12</span>
+                                        </div>
+                                    </a>
+                                    <a class="photo" href="#">
+                                        <img title="이경희 선임연구원" src="../assets/skin/images/photo_profile.jpg" data-pin-nopin="true" alt="">
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="box_footer">
+                                        <span class="wrap_btn">
+                                            <a class="btn_round" href="">
+                                                <span class="ic ic_round_move"></span>
+                                                <span class="txt">게시판 이동</span>
+                                            </a>
+                                            <a class="btn_round" href="">
+                                                <span class="ic ic_round_add"></span>
+                                                <span class="txt">글쓰기</span>
+                                            </a>
+                                        </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- calendar -->
+                    <div class="today calendar">
+                        <span class="ic ic_today_calendar"></span>
+                        <span class="line"></span>
+                        <span class="tit">캘린더</span>
+                        <div class="box">
+                            <p class="data_null">
+                                <span class="txt">오늘의 일정이 없습니다.</span>
+                            </p>
+                            <ul class="list">
+                                <li>
+                                    <a class="subject" href="#">
+                                        <span class="txt">내용</span>
+                                    </a>
+                                    <span class="wrap_state">
+                                                <span class="state">
+                                                    <span class="txt">종일</span>
+                                                    <span class="tail"></span>
+                                                </span>
+                                            </span>
+                                </li>
+                                <li>
+                                    <a class="subject" href="#">
+                                        <span class="txt">내용</span>
+                                    </a>
+                                    <span class="wrap_state">
+                                                <span class="state">
+                                                    <span class="txt">11:30~12:30</span>
+                                                    <span class="tail"></span>
+                                                </span>
+                                            </span>
+                                </li>
+                            </ul>
+                            <div class="box_footer">
+                                        <span class="wrap_btn">
+                                            <a class="btn_round" href="">
+                                                <span class="ic ic_round_move"></span>
+                                                <span class="txt">캘린더 이동</span>
+                                            </a>
+                                            <a class="btn_round" href="">
+                                                <span class="ic ic_round_move"></span>
+                                                <span class="txt">일정등록</span>
+                                            </a>
+                                        </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 전자결재 -->
+                    <div class="today approval">
+                        <span class="ic ic_today_approval"></span>
+                        <span class="line"></span>
+                        <span class="tit">전자결재</span>
+                        <div class="box">
+                            <p class="data_null">
+                                <span class="txt">결재 대기 문서가 없습니다.</span>
+                            </p>
+                            <ul class="list">
+                                <li>
+                                    <a class="subject" href="#">
+                                        <span class="txt">내용</span>
+                                    </a>
+                                    <span class="wrap_state">
+                                                <span class="state ongoing">
+                                                    <span class="txt">진행중</span>
+                                                    <span class="tail"></span>
+                                                </span>
+                                            </span>
+                                </li>
+                                <li>
+                                    <a class="subject" href="#">
+                                        <span class="txt">내용</span>
+                                    </a>
+                                    <span class="wrap_state">
+                                                <span class="state finish">
+                                                    <span class="txt">완료</span>
+                                                    <span class="tail"></span>
+                                                </span>
+                                            </span>
+                                </li>
+                            </ul>
+                            <div class="box_footer">
+                                        <span class="wrap_btn">
+                                            <a class="btn_round" href="">
+                                                <span class="ic ic_round_move"></span>
+                                                <span class="txt">전자결재 이동</span>
+                                            </a>
+                                        </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 보고 -->
+                    <div class="today report">
+                        <span class="ic ic_today_report"></span>
+                        <span class="line"></span>
+                        <span class="tit">보고</span>
+                        <div class="box">
+                            <p class="data_null">
+                                <span class="txt">작성할 보고가 없습니다.</span>
+                            </p>
+                            <ul class="list">
+                                <li>
+                                    <a class="subject" href="#">
+                                        <span class="txt">내용</span>
+                                        <div class="info">
+                                            <span class="txt name els">디자인팀</span>
+                                            <span class="part">|</span>
+                                            <span class="txt">보고자 3명</span>
+                                        </div>
+                                    </a>
+                                    <span class="wrap_state">
+                                                <span class="state notyet">
+                                                    <span class="txt">오늘마감</span>
+                                                    <span class="tail"></span>
+                                                </span>
+                                            </span>
+                                </li>
+                                <li>
+                                    <a class="subject" href="#">
+                                        <span class="txt">연구소 주간보고(제 86회차)</span>
+                                        <div class="info">
+                                            <span class="txt name els">팀명이 길어질 경우입니다</span>
+                                            <span class="part">|</span>
+                                            <span class="txt">보고자 100명</span>
+                                        </div>
+                                    </a>
+                                    <span class="wrap_state">
+                                                <span class="state">
+                                                    <span class="txt">11/20</span>
+                                                    <span class="tail"></span>
+                                                </span>
+                                            </span>
+                                </li>
+                            </ul>
+                            <div class="box_footer">
+                                        <span class="wrap_btn">
+                                            <a class="btn_round" href="">
+                                                <span class="ic ic_round_move"></span>
+                                                <span class="txt">보고 이동</span>
+                                            </a>
+                                        </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- task -->
+                    <div class="today task">
+                        <span class="ic ic_today_task"></span>
+                        <span class="line"></span>
+                        <span class="tit">업무</span>
+                        <div class="box">
+                            <p class="data_null">
+                                <span class="txt">내 업무가 없습니다.</span>
+                            </p>
+                            <ul class="list">
+                                <li>
+                                    <a class="subject" href="#">
+                                        <div class="info category">
+                                            <span class="txt name els">콘텐츠이노베이션</span>
+                                            <span class="part">&gt;</span>
+                                            <span class="txt">DO2.1.x 기획 업무 공유</span>
+                                        </div>
+                                        <span class="txt">내용</span>
+                                        <div class="info">
+                                            <span class="txt name els">디자인팀</span>
+                                            <span class="part">|</span>
+                                            <span class="txt">보고자 3명</span>
+                                        </div>
+                                    </a>
+                                    <span class="wrap_state">
+                                                <span class="state finish">
+                                                    <span class="txt">완료</span>
+                                                    <span class="tail"></span>
+                                                </span>
+                                            </span>
+                                </li>
+                                <li>
+                                    <a class="subject" href="#">
+                                        <span class="txt">연구소 주간보고(제 86회차)</span>
+                                        <div class="info">
+                                            <span class="txt name els">팀명이 길어질 경우입니다</span>
+                                            <span class="part">|</span>
+                                            <span class="txt">보고자 100명</span>
+                                        </div>
+                                    </a>
+                                    <span class="wrap_state">
+                                                <span class="state etc">
+                                                    <span class="txt">진행</span>
+                                                    <span class="tail"></span>
+                                                </span>
+                                            </span>
+                                </li>
+                            </ul>
+                            <div class="box_footer">
+                                        <span class="wrap_btn">
+                                            <a class="btn_round" href="">
+                                                <span class="ic ic_round_move"></span>
+                                                <span class="txt">업무 이동</span>
+                                            </a>
+                                            <a class="btn_round" href="">
+                                                <span class="ic ic_round_add"></span>
+                                                <span class="txt">업무등록</span>
+                                            </a>
+                                        </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- survay -->
+                    <div class="today survay">
+                        <span class="ic ic_today_survay"></span>
+                        <span class="line"></span>
+                        <span class="tit">설문</span>
+                        <div class="box">
+                            <p class="data_null">
+                                <span class="txt">참여할 설문이 없습니다.</span>
+                            </p>
+                            <ul class="list">
+                                <li>
+                                    <a class="subject" href="#">
+                                        <span class="txt">설문 내용입니다</span>
+                                        <div class="info">
+                                            <span class="txt name els">설문자명</span>
+                                            <span class="part">|</span>
+                                            <span class="txt">11-22~11-28</span>
+                                        </div>
+                                    </a>
+                                    <a class="photo" href="#">
+                                        <img title="이경희 선임연구원" src="../assets/skin/images/photo_profile.jpg" data-pin-nopin="true" alt="">
+                                    </a>
+                                    <span class="wrap_state">
+                                                <span class="state etc">
+                                                    <span class="txt">진행</span>
+                                                    <span class="tail"></span>
+                                                </span>
+                                            </span>
+                                </li>
+                                <li>
+                                    <a class="subject" href="#">
+                                        <span class="txt">설문 제목이 길어질 경우 입니다 설문 제목이 길어질 경우 입니다 설문 제목이 길어질 경우 입니다 설문 제목이 길어질 경우 입니다 설문 제목이 길어질 경우 입니다 설문 제목이 길어질 경우 입니다</span>
+                                        <div class="info">
+                                            <span class="txt name els">설문자명</span>
+                                            <span class="part">|</span>
+                                            <span class="txt">11-22~11-28</span>
+                                        </div>
+                                    </a>
+                                    <a class="photo" href="#">
+                                        <img title="이경희 선임연구원" src="../assets/skin/images/photo_profile.jpg" data-pin-nopin="true" alt="">
+                                    </a>
+                                    <span class="wrap_state">
+                                                <span class="state finish">
+                                                    <span class="txt">참여완료</span>
+                                                    <span class="tail"></span>
+                                                </span>
+                                            </span>
+                                </li>
+                            </ul>
+                            <div class="box_footer">
+                                        <span class="wrap_btn">
+                                            <a class="btn_round" href="">
+                                                <span class="ic ic_round_move"></span>
+                                                <span class="txt">설문 이동</span>
+                                            </a>
+                                        </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--  //today -->
+                <!-- 메시지 -->
+                <div class="msgs">
+                    <div class="msgs_list">
+                        <div class="search">
+                            <input type="text" placeholder="채팅방, 참여자 검색">
+                            <span class="ic ic_search" title="대화 검색">검색</span>
+                            <button class="btn_close" title="삭제">
+                                <span class="ic ic_close"></span>
+                            </button>
+                        </div>
+                        <div class="wrap_list">
+                            <ul class="list nude">
+                                <li>
+                                    <div class="tit">
+                                        <span class="txt">상단 고정 대화방</span>
+                                        <span class="count">3</span>
+                                    </div>
+                                    <ul class="list">
+                                        <li>
+                                            <a class="photo" href="#">
+                                                <div>
+                                                    <img title="이경희" src="https://portal.daou.co.kr/thumb/user/small/496268-175374" alt="" style="">
+                                                </div>
+                                            </a>
+                                            <div class="info">
+                                                <div class="main">
+                                                            <span class="name">
+                                                                <strong>이경희</strong>
+                                                            </span>
+                                                    <span class="ic_me">MY</span>
+                                                </div>
+                                                <div class="sub">승진옹승진옹승진옹승진옹승진옹승진옹승진옹승진옹승진옹승진옹승진옹승진옹승진옹승진옹</div>
+                                            </div>
+                                            <span class="date">오후5:30</span>
+                                        </li>
+                                        <li>
+                                            <a class="photo" href="#">
+                                                <div class="group_bg">
+                                                    <span class="group_tit">떼</span>
+                                                </div>
+                                            </a>
+                                            <div class="info">
+                                                <div class="main">
+                                                            <span class="name">
+                                                                <strong>떼떼님, 승진옹, 하늘천비단금, 쩡, 갱욱</strong>
+                                                            </span>
+                                                    <span class="members_count">999</span>
+                                                    <span class="ic ic_alarm_off"></span>
+                                                </div>
+                                                <div class="sub">퇴장당한 대화방연출 퇴장당한 대화방연출퇴장당한 대화방연출퇴장당한 대화방연출</div>
+                                            </div>
+                                            <span class="date">오후5:30</span>
+                                            <span class="push">2</span>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <div class="tit">
+                                        <span class="txt">대화목록</span>
+                                    </div>
+                                    <ul class="list">
+                                        <li class="">
+                                            <span class="ic ic_notice"></span>
+                                            <div class="info">
+                                                <div class="main">
+                                                            <span class="name">
+                                                                <strong>승진옹</strong>
+                                                            </span>
+                                                </div>
+                                                <div class="sub">공지사항 대화방입니다 공지사항 대화방입니다공지사항 대화방입니다공지사항 대화방입니다공지사항 대화방입니다</div>
+                                            </div>
+                                            <span class="date">오후5:30</span>
+                                            <span class="push">1</span>
+                                        </li>
+                                        <li class="unable">
+                                            <a class="photo" href="#">
+                                                <div class="group_bg">
+                                                    <span class="group_tit">떼</span>
+                                                </div>
+                                            </a>
+                                            <div class="info">
+                                                <div class="main">
+                                                            <span class="name">
+                                                                <strong>떼떼님, 승진옹, 하늘천비단금, 쩡, 갱욱</strong>
+                                                            </span>
+                                                    <span class="members_count">1000</span>
+                                                    <span class="ic ic_alarm_off"></span>
+                                                </div>
+                                                <div class="sub">퇴장당한 대화방연출 퇴장당한 대화방연출퇴장당한 대화방연출퇴장당한 대화방연출</div>
+                                            </div>
+                                            <span class="date">오후5:30</span>
+                                            <span class="push">2</span>
+                                        </li>
+                                        <li class="on">
+                                            <div class="layer layer_menu">
+                                                <div class="container">
+                                                    <ul class="list nude">
+                                                        <li>
+                                                            <a href="#">환경설정</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">제목이 길어질 경우 연출입니다 제목이 길어질 경우 연출입니다</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <a class="photo" href="#">
+                                                <div class="group_bg">
+                                                    <span class="group_tit">승</span>
+                                                </div>
+                                            </a>
+                                            <div class="info">
+                                                <div class="main">
+                                                            <span class="name">
+                                                                <strong>승진옹</strong>
+                                                            </span>
+                                                    <span class="members_count">14</span>
+                                                    <span class="ic ic_alarm_off"></span>
+                                                </div>
+                                                <div class="sub">승진옹승진옹승진옹승진옹승진옹승진옹승진옹승진옹승진옹승진옹승진옹승진옹승진옹승진옹</div>
+                                            </div>
+                                            <span class="date">오후5:30</span>
+                                            <span class="push">100</span>
+                                        </li>
+                                        <li class="">
+                                            <a class="photo" href="#">
+                                                <div class="group_bg">
+                                                    <span class="group_tit">승</span>
+                                                </div>
+                                            </a>
+                                            <div class="info">
+                                                <div class="main">
+                                                            <span class="name">
+                                                                <strong>승진옹</strong>
+                                                            </span>
+                                                    <span class="members_count">14</span>
+                                                </div>
+                                                <div class="sub">
+                                                    <img src="images/sticker/happy.png" alt="" title="행복" class="sticker">
+                                                </div>
+                                            </div>
+                                            <span class="date">오후5:30</span>
+                                        </li>
+                                        <li class="">
+                                            <a class="photo" href="#">
+                                                <div class="group_bg">
+                                                    <span class="group_tit">승</span>
+                                                </div>
+                                                <!-- backup button -->
+                                                <span class="btn_backup" style="display: " title="백업 열기">
+                                                            <span class="ic ic_completed"></span>
+                                                        </span>
+                                            </a>
+                                            <div class="info">
+                                                <div class="main">
+                                                            <span class="name">
+                                                                <strong>승진옹</strong>
+                                                            </span>
+                                                    <span class="members_count">14</span>
+                                                </div>
+                                                <div class="sub">
+                                                    ㅇㅇ
+                                                </div>
+                                            </div>
+                                            <span class="date">오후5:30</span>
+                                        </li>
+                                        <li class="">
+                                            <a class="photo" href="#">
+                                                <div>
+                                                    <div class="group_bg" style="background: rgb(172, 38, 98); display: none;"></div>
+                                                    <img title="조윤호" src="https://portal.daou.co.kr/thumb/user/small/491237-80970" alt="" style="">
+                                                    <!-- down loading -->
+                                                    <div class="wrap_spin" style="display: ">
+                                                        <div class="spin">
+                                                            <span class="spinner"></span>
+                                                            <span class="ic ic_x_type2"></span>
+                                                            <span class="tooltip">백업 취소</span>
+                                                        </div>
+                                                    </div>
+                                                    <!-- down completed -->
+                                                    <span class="btn_backup" style="display: none">
+                                                                <span class="ic ic_completed"></span>
+                                                                <span class="tooltip">백업  완료</span>
+                                                            </span>
+                                                </div>
+                                            </a>
+                                            <div class="info">
+                                                <div class="main">
+                                                            <span class="name">
+                                                                <strong>승진옹</strong>
+                                                            </span>
+                                                    <span class="members_count">14</span>
+                                                </div>
+                                                <div class="sub">
+                                                    DOmsg/design/messenger.html
+                                                </div>
+                                            </div>
+                                            <span class="date">오후5:30</span>
+                                        </li>
+                                        <li>
+                                            <a class="photo" href="#">
+                                                <div>
+                                                    <img title="이경희" src="https://portal.daou.co.kr/thumb/user/small/496268-175374" alt="" style="">
+                                                    <!-- down loading -->
+                                                    <div class="wrap_spin" style="display: none">
+                                                        <div class="spin">
+                                                            <span class="spinner"></span>
+                                                            <span class="ic ic_x_type2"></span>
+                                                            <span class="tooltip">백업 취소</span>
+                                                        </div>
+                                                    </div>
+                                                    <!-- down completed -->
+                                                    <span class="btn_backup" style="display: " title="백업 열기">
+                                                                <span class="ic ic_completed"></span>
+                                                            </span>
+                                                </div>
+                                            </a>
+                                            <div class="info">
+                                                <div class="main">
+                                                            <span class="name">
+                                                                <strong>승진옹</strong>
+                                                            </span>
+                                                    <span class="members_count">14</span>
+                                                </div>
+                                                <div class="sub">승진옹승진옹승진옹승진옹승진옹승진옹승진옹승진옹승진옹승진옹승진옹승진옹승진옹승진옹</div>
+                                            </div>
+                                            <span class="date">오후5:30</span>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- 새대화 버튼 -->
+                        <a class="btn_talk" href="" title="새 대화">
+                            <span class="ic ic_talk"></span>
+                        </a>
+                    </div>
+                    <div class="msgs_view">
+                        <div class="msgs_view_header">
+                            <div class="subject">
+                                        <span class="members">
+                                            <div class="group_bg">
+                                                <span class="group_tit">대</span>
+                                            </div>
+                                        </span>
+                                <!-- down loading -->
+                                <div class="wrap_spin" style="display: ">
+                                    <div class="spin">
+                                        <span class="spinner"></span>
+                                        <span class="ic ic_x_type2"></span>
+                                        <span class="tooltip">백업 취소</span>
+                                    </div>
+                                </div>
+                                <!-- down completed -->
+                                <span class="btn_backup" style="display: none " title="백업 열기">
+                                            <span class="ic ic_completed"></span>
+                                        </span>
+                                <span class="txt">대화방 제목입니다대화방 제목입니다대화방 제목입니다대화방 제목입니다대화방 제목입니다대화방 제목입니다대화방 제목입니다대화방 제목입니다</span><span class="count">13</span>
+                            </div>
+                            <div class="optional">
+                                <button type="button" class="btn_ic_v3 btn_ic_alarm" title="알람 끄기">
+                                    <span class="ic_v3 alarm"></span>
+                                </button>
+                                <button type="button" class="btn_ic_v3 btn_ic_pin" title="고정 해제">
+                                    <span class="ic_v3 pin"></span>
+                                </button>
+                                <button type="btton" class="btn_msg_opt" title="대화 정보 더보기">
+                                    <span class="ic ic_msg_opt"></span>
+                                </button>
+                            </div>
+                            <button class="btn_back">
+                                <span class="ic ic_back"></span>
+                                <span class="txt"></span>
+                            </button>
+                        </div>
+                        <div class="msgs_view_body">
+                            <div class="msg">
+                                <a class="photo" href="#">
+                                    <img title="이경희 선임연구원" src="../assets/skin/images/photo_profile.jpg" data-pin-nopin="true" alt="">
+                                </a>
+                                <div class="msg_row">
+                                    <div class="msg_header">
+                                        <span class="name">승진옹</span>
+                                    </div>
+                                    <div class="msg_body">
+                                                <span class="bubble del">
+                                                    <span class="txt">사용자가 삭제한 대화입니다</span>
+                                                </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="msg me">
+                                <a class="photo" href="#">
+                                    <img title="이경희 선임연구원" src="../assets/skin/images/photo_profile.jpg" data-pin-nopin="true" alt="">
+                                </a>
+                                <div class="msg_row">
+                                    <div class="msg_header">
+                                        <span class="name">승진옹</span>
+                                    </div>
+                                    <div class="msg_body">
+                                                <span class="bubble del">
+                                                    <span class="txt">사용자가 삭제한 대화입니다</span>
+                                                </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 메시지 : 파일첨부 -->
+                            <div class="msg">
+                                <a class="photo" href="#">
+                                    <img title="이경희 선임연구원" src="../assets/skin/images/photo_profile.jpg" data-pin-nopin="true" alt="">
+                                </a>
+                                <div class="msg_row">
+                                    <div class="msg_header">
+                                        <span class="name">승진옹</span>
+                                    </div>
+                                    <div class="msg_body">
+                                                <span class="bubble attach">
+                                                    <span class="bubble_state">
+                                                        <span class="read_num">1</span>
+                                                        <span class="date">오후 05:30</span>
+                                                    </span>
+                                                    <!-- 첨부파일-->
+                                                    <div class="attach">
+                                                        <span class="wrap_ic_attach">
+                                                            <span class="ic_attach">
+                                                                <span class="spinner"></span>
+                                                                <span class="ic ic_x_type2"></span>
+                                                            </span>
+                                                        </span>
+                                                        <div class="attach_info">
+                                                            <span class="attach_name" href="">다운 중 (취소하면 말풍선 삭제됨).pptx</span>
+                                                            <span class="attach_size" href="">100/123.12MB</span>
+                                                        </div>
+                                                    </div>
+                                                    <!-- //첨부파일-->
+                                                </span>
+                                    </div>
+                                    <div>
+                                        <!--개발코드싱크맞춤 - 향후 클래스 추가 및UI고민필요-->
+                                        <a class="btn_download" href="" download="">취소</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- //메시지 : 파일첨부 -->
+                            <!-- 메시지 : 파일첨부 -->
+                            <div class="msg">
+                                <a class="photo" href="#">
+                                    <img title="이경희 선임연구원" src="../assets/skin/images/photo_profile.jpg" data-pin-nopin="true" alt="">
+                                </a>
+                                <div class="msg_row">
+                                    <div class="msg_header">
+                                        <span class="name">승진옹</span>
+                                    </div>
+                                    <div class="msg_body">
+                                                <span class="bubble attach complete">
+                                                    <span class="bubble_state">
+                                                        <span class="read_num">1</span>
+                                                        <span class="date">오후 05:30</span>
+                                                    </span>
+                                                    <!-- 첨부파일-->
+                                                    <div class="attach">
+                                                        <span class="wrap_ic_attach">
+                                                            <span class="ic_attach">
+                                                                <span class="spinner_complete"></span>
+                                                                <span class="ic_file_s pdf"></span>
+                                                            </span>
+                                                        </span>
+                                                        <div class="attach_info">
+                                                            <span class="attach_name" href="">다운 완료.pptx</span>
+															 <span class="attach_valid" href="">유효기간 : ~2020.02.10</span>
+                                                            <span class="attach_size" href="">123.12MB</span>
+                                                        </div>
+                                                    </div>
+                                                    <!-- //첨부파일-->
+                                                </span>
+                                    </div>
+                                    <div>
+                                        <!--개발코드싱크맞춤 - 향후 클래스 추가 및UI고민필요-->
+                                        <a class="btn_download" href="" download="">열기</a>
+                                        <a class="btn_download" title="" href="" download="">폴더열기</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- //메시지 : 파일첨부 -->
+                            <!-- 메시지 : 파일첨부 -->
+                            <div class="msg">
+                                <a class="photo" href="#">
+                                    <img title="이경희 선임연구원" src="../assets/skin/images/photo_profile.jpg" data-pin-nopin="true" alt="">
+                                </a>
+                                <div class="msg_row">
+                                    <div class="msg_header">
+                                        <span class="name">승진옹</span>
+                                    </div>
+                                    <div class="msg_body">
+                                                <span class="bubble attach">
+                                                    <span class="bubble_state">
+                                                        <span class="read_num">1</span>
+                                                        <span class="date">오후 05:30</span>
+                                                    </span>
+                                                    <!-- 첨부파일-->
+                                                    <div class="attach">
+                                                        <span class="wrap_ic_attach">
+                                                            <span class="ic_attach">
+                                                                <span class="ic ic_arrow_down2"></span>
+                                                            </span>
+                                                        </span>
+                                                        <div class="attach_info">
+                                                            <span class="attach_name" href="">다운 받은 파일을 삭제 후 재다운 시.pptx</span>
+                                                             <span class="attach_valid" href="">유효기간 : ~2020.02.10</span>
+															<span class="attach_size" href="">123.12MB</span>
+                                                        </div>
+                                                    </div>
+                                                    <!-- //첨부파일-->
+                                                </span>
+                                    </div>
+                                    <div>
+                                        <!--개발코드싱크맞춤 - 향후 클래스 추가 및UI고민필요-->
+                                        <a class="btn_download" href="" download="">저장</a>
+                                        <a class="btn_download" href="" download="">다른 이름으로 저장</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- //메시지 : 파일첨부 -->
+                            <!-- 메시지 : 파일첨부 -->
+                            <div class="msg me">
+                                <a class="photo" href="#">
+                                    <img title="이경희 선임연구원" src="../assets/skin/images/photo_profile.jpg" data-pin-nopin="true" alt="">
+                                </a>
+                                <div class="msg_row">
+                                    <div class="msg_header">
+                                        <span class="name">승진옹</span>
+                                    </div>
+                                    <div class="msg_body">
+                                                <span class="bubble attach">
+                                                    <span class="bubble_state">
+                                                        <span class="read_num">1</span>
+                                                        <span class="date">오후 05:30</span>
+                                                    </span>
+                                                    <!-- 첨부파일-->
+                                                    <div class="attach">
+                                                        <span class="wrap_ic_attach">
+                                                            <span class="ic_attach">
+                                                                <span class="spinner"></span>
+                                                                <span class="ic ic_x_type2"></span>
+                                                            </span>
+                                                        </span>
+                                                        <div class="attach_info">
+                                                            <span class="attach_name" href="">다운 중.pptx</span>
+															 <span class="attach_valid" href="">유효기간 : ~2020.02.10</span>
+                                                            <span class="attach_size" href="">100/123.12MB</span>
+                                                        </div>
+                                                    </div>
+                                                    <!-- //첨부파일-->
+                                                </span>
+                                    </div>
+                                    <div>
+                                        <!--개발코드싱크맞춤 - 향후 클래스 추가 및UI고민필요-->
+                                        <a class="btn_download" href="" download="">취소</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- //메시지 : 파일첨부 -->
+                            <div class="msg me">
+                                <a class="photo" href="#">
+                                    <img title="이경희 선임연구원" src="../assets/skin/images/photo_profile.jpg" data-pin-nopin="true" alt="">
+                                </a>
+                                <div class="msg_row">
+                                    <div class="msg_header">
+                                        <span class="name">승진옹</span>
+                                    </div>
+                                    <div class="msg_body">
+                                                <span class="bubble attach complete">
+                                                    <span class="bubble_state">
+                                                        <span class="read_num">1</span>
+                                                        <span class="date">오후 05:30</span>
+                                                    </span>
+                                                    <!-- 첨부파일-->
+                                                    <div class="attach">
+                                                        <span class="wrap_ic_attach">
+                                                            <span class="ic_attach">
+                                                                <span class="spinner_complete"></span>
+                                                                <span class="ic_file_s pdf"></span>
+                                                            </span>
+                                                        </span>
+                                                        <div class="attach_info">
+                                                            <span class="attach_name" href="">업로드 완료.pptx</span>
+															 <span class="attach_valid" href="">유효기간 : ~2020.02.10</span>
+                                                            <span class="attach_size" href="">123.12MB</span>
+                                                        </div>
+                                                    </div>
+                                                    <!-- //첨부파일-->
+                                                </span>
+                                    </div>
+                                    <div>
+                                        <!--개발코드싱크맞춤 - 향후 클래스 추가 및UI고민필요-->
+                                        <a class="btn_download" href="" download="">열기</a>
+                                        <a class="btn_download" title="" href="" download="">폴더열기</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="msg me">
+                                <a class="photo" href="#">
+                                    <img title="이경희 선임연구원" src="../assets/skin/images/photo_profile.jpg" data-pin-nopin="true" alt="">
+                                </a>
+                                <div class="msg_row">
+                                    <div class="msg_header">
+                                        <span class="name">승진옹</span>
+                                    </div>
+                                    <div class="msg_body">
+                                                <span class="bubble attach">
+                                                    <span class="bubble_state">
+                                                        <span class="read_num">1</span>
+                                                        <span class="date">오후 05:30</span>
+                                                    </span>
+                                                    <!-- 첨부파일-->
+                                                    <div class="attach">
+                                                        <span class="wrap_ic_attach">
+                                                            <span class="ic_attach">&nbsp;&nbsp;
+                                                                <span class="ic ic_arrow_down2"></span>
+                                                            </span>
+                                                        </span>
+                                                        <div class="attach_info">
+                                                            <span class="attach_name" href="">업로드 된 파일을 삭제 후 재다운 시.pptx</span>
+                                                            <span class="attach_size" href="">123.12MB</span>
+                                                        </div>
+                                                    </div>
+                                                    <!-- //첨부파일-->
+                                                </span>
+                                    </div>
+                                    <div>
+                                        <!--개발코드싱크맞춤 - 향후 클래스 추가 및UI고민필요-->
+                                        <a class="btn_download" href="" download="">저장</a>
+                                        <a class="btn_download" href="" download="">다른 이름으로 저장</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 메시지 : 파일첨부 -->
+                            <div class="msg">
+                                <div class="msg_row">
+                                    <div class="msg_body">
+                                                <span class="bubble bubble_photo">
+                                                    <a class="img_attach" href=""><img src="images/sample_photo.png" alt=""></a>
+                                                    <span class="bubble_state">
+                                                        <span class="read_num">1</span>
+                                                        <span class="date">오후 05:30</span>
+                                                    </span>
+                                                </span>
+                                    </div>
+                                    <div>
+                                        <!--개발코드싱크맞춤 - 향후 클래스 추가 및UI고민필요-->
+                                        <a class="btn_download" href="" download="">저장</a>
+                                        <a class="btn_download" title="" href="" download="">다른 이름으로 저장</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- //메시지 : 파일첨부 -->
+                            <!-- 메시지 : 파일첨부 -->
+                            <div class="msg">
+                                <div class="msg_row">
+                                    <div class="msg_body">
+                                                <span class="bubble bubble_photo">
+                                                    <a class="img_attach" href=""><img src="images/sample_photo_s.png" alt=""></a>
+                                                    <span class="bubble_state">
+                                                        <span class="read_num">1</span>
+                                                        <span class="date">오후 05:35</span>
+                                                    </span>
+                                                </span>
+                                    </div>
+                                    <div>
+                                        <!--개발코드싱크맞춤 - 향후 클래스 추가 및UI고민필요-->
+                                        <a class="btn_download" href="" download="">열기</a>
+                                        <a class="btn_download" title="" href="" download="">폴더열기</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- //메시지 : 파일첨부 -->
+                            <!-- 메시지 : 파일첨부 -->
+                            <div class="msg">
+                                <div class="msg_row">
+                                    <div class="msg_body">
+                                                <span class="bubble bubble_photo">
+                                                    <a class="img_attach" href=""><img src="images/img_v.png" alt=""></a>
+                                                    <span class="bubble_state">
+                                                        <span class="read_num">1</span>
+                                                        <span class="date">오후 05:30</span>
+                                                    </span>
+                                                </span>
+                                    </div>
+                                    <div>
+                                        <!--개발코드싱크맞춤 - 향후 클래스 추가 및UI고민필요-->
+                                        <a class="btn_download" href="" download="">저장</a>
+                                        <a class="btn_download" title="" href="" download="">다른 이름으로 저장</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- //메시지 : 파일첨부 -->
+                            <!-- 메시지 : 파일첨부 -->
+                            <div class="msg">
+                                <div class="msg_row">
+                                    <div class="msg_body">
+                                                <span class="bubble bubble_photo">
+                                                    <a class="img_attach" href=""><img src="images/img_h.png" alt=""></a>
+                                                    <span class="bubble_state">
+                                                        <span class="read_num">1</span>
+                                                        <span class="date">오후 05:30</span>
+                                                    </span>
+                                                </span>
+                                    </div>
+                                    <div>
+                                        <!--개발코드싱크맞춤 - 향후 클래스 추가 및UI고민필요-->
+                                        <a class="btn_download" href="" download="">저장</a>
+                                        <a class="btn_download" title="" href="" download="">다른 이름으로 저장</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- //메시지 : 파일첨부 -->
+                            <!-- 메시지 전체보기-->
+                            <div class="msg">
+                                <a class="photo" href="#">
+                                    <img title="이경희 선임연구원" src="../assets/skin/images/photo_profile.jpg" data-pin-nopin="true" alt="">
+                                </a>
+                                <div class="msg_row">
+                                    <div class="msg_header">
+                                        <span class="name">승진옹</span>
+                                    </div>
+                                    <div class="msg_body">
+                                                <span class="bubble">
+                                                    <span class="txt">메시지 더보기 메시지 더보기 메시지 더보기 메시지 더보기 메시지 더보기 메시지 더보기 메시지 더보기 메시지 더보기 메시지 더보기메시지 더보기 메시지 더보기 메시지 더보기 메시지 더보기 메시지 더보기 메시지 더보기 메시지 더보기 메시지 더보기 메시지 더보기메시지 더보기 메시지 더보기 메시지 더보기 메시지 더보기 메시지 더보기 메시지 더보기 메시지 더보기 메시지 더보기 메시지 더보기메시지 더보기 메시지 더보기 메시지 더보기 메시지 더보기 메시지 더보기 메시지 더보기 메시지 더보기 메시지 더보기 메시지 더보기메시지 더보기 메시지 더보기 메시지 더보기 메시지 더보기 메시지 더보기 메시지 더보기 메시지 더보기 메시지 더보기 메시지 더보기</span>
+                                                    <button type="button" class="btn_msg_more">
+                                                        <!-- <span class="ic ic_arrow down"></span> -->
+                                                        <span class="txt">더보기</span>
+                                                    </button>
+                                                </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="msg me">
+                                <a class="photo" href="#">
+                                    <img title="이경희 선임연구원" src="../assets/skin/images/photo_profile.jpg" data-pin-nopin="true" alt="">
+                                </a>
+                                <div class="msg_row">
+                                    <div class="msg_header">
+                                        <span class="name">승진옹</span>
+                                    </div>
+                                    <div class="msg_body">
+                                                <span class="bubble">
+                                                    <span class="txt">메시지 더보기 메시지 더보기 메시지 더보기 메시지 더보기 메시지 더보기 메시지 더보기 메시지 더보기 메시지 더보기 메시지 더보기메시지 더보기 메시지 더보기 메시지 더보기 메시지 더보기 메시지 더보기 메시지 더보기 메시지 더보기 메시지 더보기 메시지 더보기메시지 더보기 메시지 더보기 메시지 더보기 메시지 더보기 메시지 더보기 메시지 더보기 메시지 더보기 메시지 더보기 메시지 더보기메시지 더보기 메시지 더보기 메시지 더보기 메시지 더보기 메시지 더보기 메시지 더보기 메시지 더보기 메시지 더보기 메시지 더보기메시지 더보기 메시지 더보기 메시지 더보기 메시지 더보기 메시지 더보기 메시지 더보기 메시지 더보기 메시지 더보기 메시지 더보기</span>
+                                                    <button type="button" class="btn_msg_more">
+                                                        <!-- <span class="ic ic_arrow down"></span> -->
+                                                        <span class="txt">더보기</span>
+                                                    </button>
+                                                </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- // 메시지 전체보기 -->
+                            <!-- 메시지 : first -->
+                            <div class="msg first">
+                                <div class="line">
+                                    <span class="txt">2017년 3월 22일 수요일</span><hr></div>
+                                <p class="box box_flat ">여기까지 읽었습니다</p>
+                                <a class="photo" href="#">
+                                    <img title="이경희 선임연구원" src="../assets/skin/images/photo_profile.jpg" data-pin-nopin="true" alt="">
+                                </a>
+                                <div class="msg_row">
+                                    <div class="msg_header">
+                                        <span class="name">승진옹</span>
+                                    </div>
+                                    <div class="msg_body">
+                                                <span class="bubble">
+                                                    <span class="txt">연속 메시지 frist</span>
+                                                </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- //메시지 -->
+                            <!-- 메시지 : normal -->
+                            <div class="msg">
+                                <div class="msg_row">
+                                    <div class="msg_body">
+                                                <span class="bubble">
+                                                    <span class="txt">연속 메시지 normal</span>
+                                                    <!-- 우클릭 메뉴 -->
+                                                    <div class="layer layer_menu">
+                                                        <div class="container">
+                                                            <ul class="list nude">
+                                                                <li>
+                                                                    <a href="#">우클릭 메뉴1</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#">우클릭 메뉴2</a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <!-- //우클릭 메뉴 -->
+                                                </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- //메시지 -->
+                            <!-- 메시지 : last -->
+                            <div class="msg last">
+                                <div class="msg_row">
+                                    <div class="msg_body">
+                                                <span class="bubble">
+                                                    <span class="txt">메시지
+                                                        <span class="bg_search">검색어</span>
+                                                        연출</span>
+                                                    <span class="bubble_state">
+                                                        <span class="read_num">1</span>
+                                                        <span class="date">오후 05:30</span>
+                                                    </span>
+                                                </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- //메시지 -->
+                            <!-- 메시지 : first -->
+                            <div class="msg me first">
+                                <div class="line">
+                                    <span class="txt">2017년 3월 22일 수요일</span><hr></div>
+                                <p class="box box_flat ">여기까지 읽었습니다</p>
+                                <a class="photo" href="#">
+                                    <img title="이경희 선임연구원" src="../assets/skin/images/photo_profile.jpg" data-pin-nopin="true" alt="">
+                                </a>
+                                <div class="msg_row">
+                                    <div class="msg_header">
+                                        <span class="name">승진옹</span>
+                                    </div>
+                                    <div class="msg_body">
+                                                <span class="bubble">
+                                                    <span class="txt">연속 메시지 frist</span>
+                                                </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- //메시지 -->
+                            <!-- 메시지 :dle -->
+                            <div class="msg me">
+                                <div class="msg_row">
+                                    <div class="msg_body">
+                                                <span class="bubble">
+                                                    <span class="txt">연속 메시지 normal</span>
+                                                    <!-- 우클릭 메뉴 -->
+                                                    <div class="layer layer_menu">
+                                                        <div class="container">
+                                                            <ul class="list nude">
+                                                                <li>
+                                                                    <a href="#">우클릭 메뉴1</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#">메뉴명이 길어질 경우 연출입니다 메뉴명이 길어질 경우 연출입니다</a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <!-- //우클릭 메뉴 -->
+                                                </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- //메시지 -->
+                            <!-- 메시지 : last -->
+                            <div class="msg me last">
+                                <div class="msg_row">
+                                    <div class="msg_body">
+                                                <span class="bubble">
+                                                    <span class="txt">연속 메시지 last</span>
+                                                    <span class="bubble_state">
+                                                        <span class="read_num">1</span>
+                                                        <span class="date">오후 05:30</span>
+                                                    </span>
+                                                </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- //메시지 -->
+                            <!-- 메시지 : 이모티콘 -->
+                            <div class="msg">
+                                <a class="photo" href="#">
+                                    <img title="이경희 선임연구원" src="../assets/skin/images/photo_profile.jpg" data-pin-nopin="true" alt="">
+                                </a>
+                                <div class="msg_row">
+                                    <div class="msg_header">
+                                        <span class="name">승진옹</span>
+                                    </div>
+                                    <div class="msg_body">
+                                                <span class="bubble sticker">
+                                                    <img src="images/sticker/happy.png" alt="" title="행복" class="sticker">
+                                                    <span class="bubble_state">
+                                                        <span class="read_num">1</span>
+                                                        <span class="date">오후 05:30</span>
+                                                    </span>
+                                                </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- //메시지 : 이모티콘 -->
+                            <!-- 메시지 : 이모티콘 -->
+                            <div class="msg me">
+                                <a class="photo" href="#">
+                                    <img title="이경희 선임연구원" src="../assets/skin/images/photo_profile.jpg" data-pin-nopin="true" alt="">
+                                </a>
+                                <div class="msg_row">
+                                    <div class="msg_header">
+                                        <span class="name">승진옹</span>
+                                    </div>
+                                    <div class="msg_body">
+                                                <span class="bubble sticker">
+                                                    <img src="images/sticker/happy.png" alt="" title="행복" class="sticker">
+                                                    <span class="bubble_state">
+                                                        <span class="read_num">1</span>
+                                                        <span class="date">오후 05:30</span>
+                                                    </span>
+                                                </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- //메시지 : 이모티콘 -->
+                            <!-- 메시지 -->
+                            <div class="msg">
+                                <a class="photo" href="#">
+                                    <img title="이경희 선임연구원" src="../assets/skin/images/photo_profile.jpg" data-pin-nopin="true" alt="">
+                                </a>
+                                <div class="msg_row">
+                                    <div class="msg_header">
+                                        <span class="name">승진옹</span>
+                                    </div>
+                                    <div class="msg_body">
+                                                <span class="bubble">
+                                                    <span class="txt">개별 메시지</span>
+                                                    <span class="bubble_state">
+                                                        <span class="read_num"></span>
+                                                        <span class="date" data-time="오전 10:29" data-sender="945">오전 10:29</span>
+                                                    </span>
+                                                </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- //메시지 -->
+                            <!-- 링크 -->
+                            <div class="msg" data-messageid="27255">
+                                <div class="msg_row">
+                                    <div class="msg_body">
+                                                <span class="bubble">
+                                                    <span>
+                                                        <!-- react-text: 682 -->
+                                                        https://deminoth.github.io/redux/advanced/AsyncFlow.html
+                                                        <!-- /react-text -->
+                                                        <br>
+                                                    </span>
+                                                    <span class="bubble_state">
+                                                        <span class="read_num"></span>
+                                                        <span class="date"><!-- react-text: 687 -->
+                                                            <!-- /react-text -->
+                                                            <!-- react-text: 688 -->오후 01:51<!-- /react-text -->
+                                                    </span>
+                                                </span>
+                                            </span>
+                                    </div>
+                                </div>
+                                <div class="msg_row"> <div class="msg_body">
+                                                <span class="bubble bubble_link">
+                                                    <span class="wrap_thume">
+                                                        <img src="../assets/skin/images/test_star.jpg" style="width: 200px; height: 200px;">
+                                                        <!-- react-text: 691 -->
+                                                        <!-- /react-text -->
+                                                    </span>
+                                                    <br>
+                                                    <span class="tit">제목이 길어질 경우 한줄로 말줄임 처리 됩니다.</span>
+                                                    <span class="txt">설명글이 길어질 경우 말줄임 처리 됩니다  설명글이 길어질 경우 말줄임 처리 됩니다
+                                                    </span>
+                                                    <a class="link" href="#" target="_blank"><!-- react-text: 699 -->https://deminoth.github.io/redux/advanced/AsyncFlow.html<!-- /react-text --></a>
+                                                </span>
+                                </div>
+                                </div>
+                                <div class="msg_row">
+                                    <div class="msg_body">
+                                                <span class="bubble bubble_link">
+                                                    <span class="wrap_thume">
+                                                        <img src="../assets/skin/images/url_daouoffice_logo.png" style="width: 200px; height: 200px;">
+                                                        <!-- react-text: 691 -->
+                                                        <!-- /react-text -->
+                                                    </span>
+                                                    <br>
+                                                    <span class="tit">제목이 짧으면</span>
+                                                    <span class="txt">아래를 눌러 링크를 확인하세요</span>
+                                                    <a class="link" href="#" target="_blank"><!-- react-text: 699 -->https://deminoth.github.io/redux/advanced/AsyncFlow.html<!-- /react-text --></a>
+                                                </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 링크 -->
+                            <div class="msg me" data-messageid="27255">
+                                <div class="msg_row">
+                                    <div class="msg_body">
+                                                <span class="bubble bubble_link">
+                                                    <span class="wrap_thume">
+                                                        <img src="../assets/skin/images/url_daouoffice_logo.png" style="width: 200px; height: 200px;">
+                                                        <!-- react-text: 691 -->
+                                                        <!-- /react-text -->
+                                                    </span>
+                                                    <br>
+                                                    <span class="tit"><!-- react-text: 693 -->비동기 흐름 · Redux<!-- /react-text -->
+                                                        <!-- react-text: 694 -->
+                                                        <!-- /react-text -->
+                                                    </span>
+                                                    <span class="txt"><!-- react-text: 696 -->&lt;a href="Middleware.html"&gt;미들웨어&lt;/a&gt;가 없으면 Redux는 &lt;a href="../basics/DataFlow.html"&gt;동기 데이터 흐름&lt;/a&gt;만을 지원합니다. &lt;a href="../api/createStore.html"&gt;&lt;code&gt;createStore()&lt;/code&gt;&lt;/a&gt;의 기본값입니다.<!-- /react-text -->
+                                                        <!-- react-text: 697 -->
+                                                        <!-- /react-text -->
+                                                    </span>
+                                                    <a class="link" href="#" target="_blank"><!-- react-text: 699 -->https://deminoth.github.io/redux/advanced/AsyncFlow.html<!-- /react-text --></a>
+                                                </span>
+                                    </div>
+                                </div>
+                                <div class="msg_row">
+                                    <div class="msg_body">
+                                                <span class="bubble">
+                                                    <span>
+                                                        <!-- react-text: 682 -->
+                                                        https://deminoth.github.io/redux/advanced/AsyncFlow.html
+                                                        <!-- /react-text -->
+                                                        <br>
+                                                    </span>
+                                                    <span class="bubble_state">
+                                                        <span class="read_num"></span>
+                                                        <span class="date"><!-- react-text: 687 -->
+                                                            <!-- /react-text -->
+                                                            <!-- react-text: 688 -->오후 01:51<!-- /react-text -->
+                                                    </span>
+                                                </span>
+                                            </span>
+                                    </div>
+                                </div>
+                                <div class="msg_row"> <div class="msg_body">
+                                                <span class="bubble bubble_link">
+                                                    <span class="wrap_thume">
+                                                        <img src="../assets/skin/images/test_star.jpg" style="width: 200px; height: 200px;">
+                                                        <!-- react-text: 691 -->
+                                                        <!-- /react-text -->
+                                                    </span>
+                                                    <br>
+                                                    <span class="tit"><!-- react-text: 693 -->비동기 흐름 · Redux<!-- /react-text -->
+                                                        <!-- react-text: 694 -->
+                                                        <!-- /react-text -->
+                                                    </span>
+                                                    <span class="txt"><!-- react-text: 696 -->&lt;a href="Middleware.html"&gt;미들웨어&lt;/a&gt;가 없으면 Redux는 &lt;a href="../basics/DataFlow.html"&gt;동기 데이터 흐름&lt;/a&gt;만을 지원합니다. &lt;a href="../api/createStore.html"&gt;&lt;code&gt;createStore()&lt;/code&gt;&lt;/a&gt;의 기본값입니다.<!-- /react-text -->
+                                                        <!-- react-text: 697 -->
+                                                        <!-- /react-text -->
+                                                    </span>
+                                                    <a class="link" href="#" target="_blank"><!-- react-text: 699 -->https://deminoth.github.io/redux/advanced/AsyncFlow.html<!-- /react-text --></a>
+                                                </span>
+                                </div>
+                                </div>
+                            </div>
+                            <div class="line">
+                                <span class="txt">2017년 3월 22일 수요일</span><hr></div>
+                            <p class="box box_flat ">여기까지 읽었습니다</p>
+                            <p class="box">이천금님께서 이승진 님에 의해 퇴장되었습니다.</p>
+                            <!-- 메시지 -->
+                            <div class="msg">
+                                <div class="msg_row">
+                                    <div class="msg_body">
+                                                <span class="bubble">
+                                                    <span class="txt">메시지가 길어질 경우 연출입니다 메시지가 길어질 경우 연출입니다 메시지가 길어질 경우 연출입니다</span>
+                                                    <span class="bubble_state">
+                                                        <span class="read_num">1</span>
+                                                        <span class="date">오후 05:30</span>
+                                                    </span>
+                                                </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- //메시지 -->
+                            <!-- 메시지 : 나 -->
+                            <div class="msg me">
+                                <div class="msg_row">
+                                    <a class="photo" href="#">
+                                        <img title="이경희 선임연구원" src="../assets/skin/images/photo_profile.jpg" data-pin-nopin="true" alt="">
+                                    </a>
+                                    <div class="msg_header">
+                                        <span class="name">승진옹</span>
+                                    </div>
+                                    <div class="msg_body">
+                                                <span class="bubble">
+                                                    <span class="txt">내 메시지</span>
+                                                </span>
+                                    </div>
+                                    <div class="msg_body">
+                                                <span class="bubble">
+                                                    <span class="txt">내 메시지가 길어질 경우 연출입니다 내 메시지가 길어질 경우 연출입니다내 메시지가 길어질 경우 연출입니다 내 메시지가 길어질 경우 연출입니다
+                                                    </span>
+                                                    <span class="bubble_state">
+                                                        <span class="read_num">1</span>
+                                                        <span class="date">오후 05:35</span>
+                                                    </span>
+                                                </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="msg me">
+                                <div class="msg_row">
+                                    <a class="photo" href="#">
+                                        <img title="이경희 선임연구원" src="../assets/skin/images/photo_profile.jpg" data-pin-nopin="true" alt="">
+                                    </a>
+                                    <div class="msg_header">
+                                        <span class="name">승진옹</span>
+                                    </div>
+                                    <div class="msg_body">
+                                                <span class="bubble">
+                                                    <span class="txt">msg
+                                                    </span>
+                                                    <span class="mission_fail">
+                                                        <button class="ic ic_m_refresh"></button>
+                                                        <button class="ic ic_m_del"></button>
+                                                    </span>
+                                                </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 메시지 : 파일첨부 -->
+                            <div class="msg me">
+                                <a class="photo" href="#">
+                                    <img title="이경희 선임연구원" src="../assets/skin/images/photo_profile.jpg" data-pin-nopin="true" alt="">
+                                </a>
+                                <div class="msg_row">
+                                    <div class="msg_header">
+                                        <span class="name">승진옹</span>
+                                    </div>
+                                    <div class="msg_body">
+                                                <span class="bubble">
+                                                    <span class="ic ic_attach"></span>
+                                                    <a class="attach" href="">차세대 PC 메신저 UX/UI 개선 기획안.pptx</a>
+                                                    <a class="file_size" href="">123.12MB</a>
+                                                    <span class="bubble_state">
+                                                        <span class="read_num">1</span>
+                                                        <span class="date">오후 05:35</span>
+                                                    </span>
+                                                </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- //메시지 : 파일첨부 -->
+                            <!-- 메시지 : 파일첨부 -->
+                            <div class="msg me">
+                                <div class="msg_row">
+                                    <div class="msg_body">
+                                                <span class="bubble">
+                                                    <span class="ic ic_attach"></span>
+                                                    <a class="attach" href="">첨부파일 명이 길어질 경우 연출입니다첨부파일 명이 길어질 경우 연출입니다첨부파일 명이 길어질 경우 연출입니다
+                                                         명이 길어질 경우 연출입니다.pptx</a>
+                                                    <a class="file_size" href="">123.12MB</a>
+                                                    <span class="bubble_state">
+                                                        <span class="read_num">1</span>
+                                                        <span class="date">오후 05:35</span>
+                                                    </span>
+                                                </span>
+                                    </div>
+                                    <div>
+                                        <!--개발코드싱크맞춤 - 향후 클래스 추가 및UI고민필요-->
+                                        <a class="btn_download" href="" download="">저장</a>
+                                        <a class="btn_download" title="" href="" download="">다른 이름으로 저장</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- //메시지 : 파일첨부 -->
+                            <!-- 메시지 : 파일첨부 -->
+                            <div class="msg me last">
+                                <div class="msg_row">
+                                    <div class="msg_body">
+                                                <span class="bubble bubble_photo">
+                                                    <a class="img_attach" href=""><img src="images/sample_photo.png" alt=""></a>
+                                                    <span class="bubble_state">
+                                                        <span class="read_num">1</span>
+                                                        <span class="date">오후 05:35</span>
+                                                    </span>
+                                                </span>
+                                    </div>
+                                    <div>
+                                        <!--개발코드싱크맞춤 - 향후 클래스 추가 및UI고민필요-->
+                                        <a class="btn_download" href="" download="">열기</a>
+                                        <a class="btn_download" title="" href="" download="">폴더열기</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- //메시지 : 파일첨부 -->
+                            <!-- 메시지 : 파일첨부 -->
+                            <div class="msg me">
+                                <div class="msg_row">
+                                    <div class="msg_body">
+                                                <span class="bubble bubble_photo">
+                                                    <a class="img_attach" href=""><img src="images/sample_photo_s.png" alt=""></a>
+                                                    <span class="bubble_state">
+                                                        <span class="read_num">1</span>
+                                                        <span class="date">오후 05:35</span>
+                                                    </span>
+                                                </span>
+                                    </div>
+                                    <div>
+                                        <!--개발코드싱크맞춤 - 향후 클래스 추가 및UI고민필요-->
+                                        <a class="btn_download" href="" download="">열기</a>
+                                        <a class="btn_download" title="" href="" download="">폴더열기</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- //메시지 : 파일첨부 -->
+                        </div>
+                        <span class="ic ic_chat_arrow_down"></span>
+                        <div class="layer layer_msgs_notice">
+                            <div class="header">
+                                <h2>
+                                    <span class="txt">메시지 공지</span>
+                                </h2>
+                                <button class="btn_close" title="닫기">
+                                    <span class="ic ic_close"></span>
+                                </button>
+                            </div>
+                            <div class="container">
+                                <p>메시지 공지 내용입니다</p>
+                                <p>메시지 공지 내용입니다</p>
+                                <p>메시지 공지 내용입니다</p>
+                                <p>메시지 공지 내용입니다</p>
+                                <p>메시지 공지 내용입니다</p>
+                                <p>메시지 공지 내용입니다</p>
+                                <p>메시지 공지 내용입니다</p>
+                                <p>메시지 공지 내용입니다</p>
+                                <p>메시지 공지 내용입니다</p>
+                                <p>메시지 공지 내용입니다</p>
+                                <p>메시지 공지 내용입니다</p>
+                                <p>메시지 공지 내용입니다</p>
+                                <p>메시지 공지 내용입니다</p>
+                                <p>메시지 공지 내용입니다</p>
+                                <p>메시지 공지 내용입니다</p>
+                                <p>메시지 공지 내용입니다</p>
+                                <p>메시지 공지 내용입니다</p>
+                                <p>메시지 공지 내용입니다</p>
+                                <p>메시지 공지 내용입니다</p>
+                                <p>메시지 공지 내용입니다</p>
+                                <p>메시지 공지 내용입니다</p>
+                                <p>메시지 공지 내용입니다</p>
+                                <p>메시지 공지 내용입니다</p>
+                                <p>메시지 공지 내용입니다</p>
+                                <p>메시지 공지 내용입니다</p>
+                                <p>메시지 공지 내용입니다</p>
+                                <p>메시지 공지 내용입니다</p>
+                                <p>메시지 공지 내용입니다</p>
+                                <p>메시지 공지 내용입니다</p>
+                                <p>메시지 공지 내용입니다</p>
+                                <p>메시지 공지 내용입니다</p>
+                                <p>메시지 공지 내용입니다</p>
+                                <p>메시지 공지 내용입니다</p>
+                                <p>메시지 공지 내용입니다</p>
+                                <p>메시지 공지 내용입니다</p>
+                                <p>메시지 공지 내용입니다</p>
+                                <p>메시지 공지 내용입니다</p><p>메시지 공지 내용입니다</p>
+                                <p>메시지 공지 내용입니다</p><p>메시지 공지 내용입니다</p><p>메시지 공지 내용입니다</p><p>메시지 공지 내용입니다</p><p>메시지 공지 내용입니다</p><p>메시지 공지 내용입니다</p>
+                            </div>
+                        </div>
+                        <div class="layer_push layer_push_img blind">
+                            <div class="container">
+                                        <span class="critical">
+                                            <img src="images/sample_photo.png" alt="">
+                                        </span>
+                                <div class="info">
+                                    <span class="txt">복사한 이미지를 전달하시겠습니까?</span>
+                                </div>
+                                <div class="optional">
+                                    <button class="btn btn_primary" type="button">보내기</button>
+                                </div>
+                                <button type="button" class="wrap_btn" title="닫기">
+                                    <span class="ic ic_x_light"></span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="layer_push layer_push_transparent layer_resent">
+                            <div class="container">
+                                        <span class="critical">
+                                            <a class="photo photo_sm" href="#">
+                                                <img title="이경희 선임연구원" src="../assets/skin/images/photo_profile.jpg" data-pin-nopin="true" alt="">
+                                            </a>
+                                        </span>
+                                <div class="info">
+                                    <div class="main">
+                                        <span class="txt els">디자인 적용을 언제까지 하나요?디자인 적용을 언제까지 하나요?디자인 적용을 언제까지 하나요?디자인 적용을 언제까지 하나요?디자인 적용을 언제까지 하나요?디자인 적용을 언제까지 하나요?</span>
+                                    </div>
+                                    <div class="sub">
+                                        <span class="txt">이경욱</span>
+                                    </div>
+                                </div>
+                                <div class="optional">
+                                    <span class="ic ic_down2">a</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="layer_push layer_push_sticker blind" style="bottom: 223px">
+                            <!-- Temporary position 184px -->
+                            <div class="container">
+                                        <span class="critical">
+                                            <button class="wrap_btn">
+                                                <span class="ic ic_star_off" title="즐겨찾기"></span>
+                                                <!-- <span class="ic ic_star_on"></span> -->
+                                            </button>
+                                        </span>
+                                <div class="optional">
+                                    <img src="images/sticker/happy.png" alt="" title="행복" class="sticker">
+                                </div>
+                                <button type="button" class="wrap_btn" title="닫기">
+                                    <span class="ic ic_x_light"></span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="msgs_write">
+                            <textarea name="" placeholder="메시지를 입력하세요."></textarea>
+                            <div class="func">
+                                <div class="func_optional">
+                                    <a href="" class="btn_func_emoticon">
+                                        <span class="ic ic_func_emoticon on" title="이모티콘"></span>
+                                        <!-- 이모티콘 -->
+                                        <div class="layer layer_sticker blind">
+                                            <div class="container">
+                                                <div class="wrap_list_sticker scroll_y">
+                                                    <ul class="list_sticker">
+                                                        <li>
+                                                            <button type="button" class="btn_sticker">
+                                                                <img class="sticker" src="images/sticker/happy.png" alt="" title="행복">
+                                                            </button>
+                                                        </li>
+                                                        <li>
+                                                            <button type="button" class="btn_sticker">
+                                                                <img class="sticker" src="images/sticker/happy.png" alt="" title="행복">
+                                                            </button>
+                                                        </li>
+                                                        <li>
+                                                            <button type="button" class="btn_sticker">
+                                                                <img class="sticker" src="images/sticker/happy.png" alt="" title="행복">
+                                                            </button>
+                                                        </li>
+                                                        <li>
+                                                            <button type="button" class="btn_sticker">
+                                                                <img class="sticker" src="images/sticker/happy.png" alt="" title="행복">
+                                                            </button>
+                                                        </li>
+                                                        <li>
+                                                            <button type="button" class="btn_sticker">
+                                                                <img class="sticker" src="images/sticker/happy.png" alt="" title="행복">
+                                                            </button>
+                                                        </li>
+                                                        <li>
+                                                            <button type="button" class="btn_sticker">
+                                                                <img class="sticker" src="images/sticker/happy.png" alt="" title="행복">
+                                                            </button>
+                                                        </li>
+                                                        <li>
+                                                            <button type="button" class="btn_sticker">
+                                                                <img class="sticker" src="images/sticker/happy.png" alt="" title="행복">
+                                                            </button>
+                                                        </li>
+                                                        <li>
+                                                            <button type="button" class="btn_sticker">
+                                                                <img class="sticker" src="images/sticker/happy.png" alt="" title="행복">
+                                                            </button>
+                                                        </li>
+                                                        <li>
+                                                            <button type="button" class="btn_sticker">
+                                                                <img class="sticker" src="images/sticker/happy.png" alt="" title="행복">
+                                                            </button>
+                                                        </li>
+                                                        <li>
+                                                            <button type="button" class="btn_sticker">
+                                                                <img class="sticker" src="images/sticker/happy.png" alt="" title="행복">
+                                                            </button>
+                                                        </li>
+                                                        <li>
+                                                            <button type="button" class="btn_sticker">
+                                                                <img class="sticker" src="images/sticker/happy.png" alt="" title="행복">
+                                                            </button>
+                                                        </li>
+                                                        <li>
+                                                            <button type="button" class="btn_sticker">
+                                                                <img class="sticker" src="images/sticker/happy.png" alt="" title="행복">
+                                                            </button>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="nav_sticker">
+                                                    <button class="btn_arrow" href="" title="다음">
+                                                        <span class="ic ic_arrow left line"></span>
+                                                    </button>
+                                                    <div class="wrap_list_sticker" style="">
+                                                        <ul class="list_sticker" style="left: 0">
+                                                            <li>
+                                                                <button type="button" class="btn_sticker">
+                                                                    <img class="sticker" src="images/sticker/favor.png" alt="" title="즐겨찾기">
+                                                                </button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button" class="btn_sticker on">
+                                                                    <img class="sticker" src="images/sticker/happy.png" alt="" title="행복">
+                                                                </button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button" class="btn_sticker">
+                                                                    <img class="sticker" src="images/sticker/happy.png" alt="" title="행복">
+                                                                </button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button" class="btn_sticker">
+                                                                    <img class="sticker" src="images/sticker/happy.png" alt="" title="행복">
+                                                                </button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button" class="btn_sticker">
+                                                                    <img class="sticker" src="images/sticker/happy.png" alt="" title="행복">
+                                                                </button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button" class="btn_sticker">
+                                                                    <img class="sticker" src="images/sticker/happy.png" alt="" title="행복">
+                                                                </button>
+                                                            </li>
+                                                            <li>
+                                                                <button type="button" class="btn_sticker">
+                                                                    <img class="sticker" src="images/sticker/happy.png" alt="" title="행복">
+                                                                </button>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <button class="btn_arrow" href="" title="다음">
+                                                        <span class="ic ic_arrow right line"></span>
+                                                    </button>
+                                                </div>
+                                                <!-- <span class="tail tail_t"></span> -->
+                                                <span class="tail tail_b">
+                                                            <span class="tail tail_b"></span>
+                                                        </span>
+                                                <!-- <span class="tail tail_l"></span> -->
+                                                <!-- <span class="tail tail_r"></span> -->
+                                            </div>
+                                        </div>
+                                        <!-- //이모티콘 -->
+                                    </a>
+                                    <a href="">
+                                        <span class="ic ic_func_attach" title="첨부파일"></span>
+                                    </a>
+                                    <a href="">
+                                        <span class="ic ic_func_capture" title="캡쳐"></span>
+                                    </a>
+                                </div>
+                                <div class="func_critical">
+                                    <a href="">
+                                        <span class="ic ic_func_send on" title="전송"></span>
+                                    </a>
+                                    <!-- <a href=""> -->
+                                    <!-- <span class="ic ic_func_send" title="전송"></span> -->
+                                    <!-- </a> -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="msgs_noti fold">
+                            <!-- 메시지 공지 -->
+                            <div class="msgs_noti_contents">
+                                <span class="ic_v3 ic_notice"></span>
+                                <div class="info">
+                                    <span class="txt">공지로 등록된 메시지입니다.공지로 등록된 메시지입니다.공지로 등록된 메시지입니다.공지로 등록된 메시지입니다.공지로 등록된 메시지입니다.공지로 등록된 메시지입니다..공지로 등록된 메시지입니다</span>
+                                    <span class="name">정해운</span>
+                                </div>
+                            </div>
+                            <!-- 파일 공지 -->
+                            <div class="msgs_noti_contents" style="display: none">
+                                <span class="ic_v3 ic_notice"></span>
+                                <div class="info">
+                                    <div class="attach">
+												<span class="wrap_ic_attach">
+													<span class="ic_attach">
+														<span class="spinner_complete"></span>
+														<span class="ic_file_s pdf"></span>
+													</span>
+												</span>
+                                        <div class="attach_info">
+                                            <span class="attach_name" href="">공지 파일입니다.pptx</span>
+                                            <span class="attach_size" href="">123.12MB</span>
+                                        </div>
+                                    </div>
+                                    <span class="name">정해운</span>
+                                </div>
+                            </div>
+                            <!-- 이미지 공지 -->
+                            <div class="msgs_noti_contents" style="display: none">
+                                <span class="ic_v3 ic_notice"></span>
+                                <div class="info">
+                                    <a class="img_attach" href=""><img src="images/sample_photo.png" alt=""></a>
+                                    <span class="name">정해운</span>
+                                </div>
+                            </div>
+                            <a href="" class="btn_acordion">
+                                <span class="ic ic_arrow up flat" title="닫기"></span>
+                            </a>
+                            <div class="msgs_noti_footer">
+                                <a href="" class="btn btn_noti_mini">접어두기</a>
+                                <a href="" class="btn">다시 보지 않음</a>
+                            </div>
+                        </div>
+                        <a href="" class="btn_ic_v3 btn_ic_notice fold">
+                            <span class="ic_v3 ic_notice"></span>
+                        </a>
+                    </div>
+                </div>
+                <!-- //메시지 -->
+            </div>
+            <!-- 메시지 옵션 -->
+            <div class="msg_opt">
+                <div class="search">
+                    <input type="textbox" placeholder="대화에서 검색">
+                    <span class="ic ic_search" title="대화 검색">검색</span>
+                    <button class="btn_close" title="삭제">
+                        <span class="ic ic_close"></span>
+                    </button>
+                    <button class="btn_ic_filter">
+                        <span class="ic ic_filter" title="필터"></span>
+                    </button>
+                    <button class="btn_close blind" title="닫기">
+                        <span class="ic ic_close"></span>
+                    </button>
+                </div>
+                <div class="filter">
+                            <span class="wrap_btn_filter">
+                                <!-- filter result -->
+                                <span class="filter_data" style="display: none">
+                                    <span class="tit">날짜 :
+                                    </span>
+                                    <span class="txt">11월 25일</span>
+                                    <span class="ic ic_close_circle"></span>
+                                </span>
+                                <!-- filter button -->
+                                <button class="btn_filter btn_filter_day"><span class="tit">날짜</span><span class="txt">: 모두</span> <span class="ic ic_arrow_s"></span> </button>
+                                <!-- filter layer -->
+                                <div class="layer_submenu">
+                                    캘린더 삽입
+                                </div>
+                            </span>
+                    <button class="btn_filter btn_filter_member" type="button"><span class="tit">사용자</span><span class="txt">: 김다우</span><span class="ic ic_close_circle" role="presentation"></span></button>
+                    <span class="wrap_btn_filter" style="display: none">
+                                <!-- filter result -->
+                                <span class="filter_data">
+                                    <span class="tit">사용자 :</span><span class="txt">조윤호</span><span class="ic ic_close_circle"></span>
+                                </span><!-- filter button --><button class="btn_filter btn_filter_member" style="display: none"><span class="tit">사용자 :</span><span class="txt">모두</span><span class="ic ic_arrow_s"></span></button>
+                        <!-- filter layer -->
+                                <div class="layer_submenu">
+                                    <ul class="list nude list_members list_submenu">
+                                        <li>
+                                            <div class="member">
+                                                <span class="form_rdi rdi_box rdi_type single">
+                                                    <input type="radio" name="saveEmail" id="saveLoginId" tabindex="5" checked="">
+                                                    <span class="ic ic_rdi off"></span>
+                                                </span>
+                                                <a class="photo s" href="#">
+                                                    <img title="이천금 주임연구원" src="../assets/skin/images/photo_profile_1.jpg" data-pin-nopin="true" alt="">
+                                                </a>
+                                                <div class="info">
+                                                    <div class="main">
+                                                        <span class="name">이천금연구원 이천금연구원이천금연구원이천금연구원이천금연구원</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="member">
+                                                <span class="form_rdi rdi_box rdi_type single">
+                                                    <input type="radio" name="saveEmail" id="saveLoginId" tabindex="5" checked="">
+                                                    <span class="ic ic_rdi off"></span>
+                                                </span>
+                                                <a class="photo s" href="#">
+                                                    <img title="이천금 주임연구원" src="../assets/skin/images/photo_profile_1.jpg" data-pin-nopin="true" alt="">
+                                                </a>
+                                                <div class="info">
+                                                    <div class="main">
+                                                        <span class="name">이천금연구원 이천금연구원이천금연구원이천금연구원이천금연구원</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </span>
+                </div>
+                <!-- 대화검색 -->
+                <div class="wrap_list_msg_opt">
+                    <!-- 대화 검색 전 -->
+                    <ul class="list list_msg_opt">
+                        <li>
+                            <div class="tit">
+                                <span class="txt">대화상대</span><span class="count">13</span><span class="ic ic_arrow up flat" title="닫기"></span> </div>
+                            <a class="btn_add" href="">
+                                <span class="ic ic_add"></span><span class="txt">대화상대 초대</span>
+                            </a>
+                            <ul class="list nude list_members">
+                                <li><div class="member"><a class="photo" href="#"><img title="이천금 주임연구원" src="../assets/skin/images/photo_profile_1.jpg" data-pin-nopin="true" alt=""></a><div class="info"><div class="main"><span class="name">이천금 과장</span> </div> </div> <span class="ic ic_state_on"></span> </div> </li>
+                                <li> <div class="member"> <a class="photo" href="#"> <img title="이천금 주임연구원" src="../assets/skin/images/photo_profile_1.jpg" data-pin-nopin="true" alt=""></a><div class="info"> <div class="main"><span class="name">이름이 길어질 경우 연출입니다</span> </div> </div> <span class="ic ic_state_on"></span> </div> </li>
+                                <li> <div class="member"> <a class="photo" href="#"> <img title="이경희 선임연구원" src="../assets/skin/images/photo_profile.jpg" data-pin-nopin="true" alt=""></a><div class="info"> <div class="main"><span class="name">이경희 선임연구원</span> </div> </div> <span class="ic ic_state_off"></span> </div> </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div class="tit">
+                                <span class="txt">사진파일</span>
+                                <span class="ic ic_arrow down flat" title="열기"></span>
+                            </div>
+                            <div class="wrap_list_photo">
+                                <div class="data_null">사진이 없습니다.</div>
+                                <ul class="list_photo">
+                                    <li>
+                                        <a class="photo" href="#">
+                                            <img title="이경희 선임연구원" src="../assets/skin/images/sample_photo_s.png" data-pin-nopin="true" alt="">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="photo" href="#">
+                                            <img title="이경희 선임연구원" src="../assets/skin/images/img_v.png" data-pin-nopin="true" alt="">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="photo" href="#">
+                                            <img title="이경희 선임연구원" src="../assets/skin/images/img_h.png" data-pin-nopin="true" alt="">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="photo" href="#">
+                                            <img title="이경희 선임연구원" src="../assets/skin/images/sample_photo.png" data-pin-nopin="true" alt="">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="photo" href="#">
+                                            <img title="이경희 선임연구원" src="../assets/skin/images/photo_profile.jpg" data-pin-nopin="true" alt="">
+                                        </a>
+                                    </li>
+                                    <li class="photo_more">
+                                        <a class="photo_more_wrap">
+                                            <span class="ic ic_more_photo"></span>
+                                            <p class="txt">사진 더 보기</p>
+                                        </a>
+                                        <a class="photo" href="#">
+                                            <img title="이경희 선임연구원" src="../assets/skin/images/photo_profile.jpg" data-pin-nopin="true" alt="">
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="tit">
+                                <span class="txt">첨부파일</span>
+                                <span class="ic ic_arrow down flat" title="닫기"></span>
+                            </div>
+                            <div class="wrap_list_msg_attach">
+                                <div class="data_null">첨부 파일이 없습니다.</div>
+                                <ul class="list nude list_msg_attach">
+                                    <li>
+                                        <!-- 첨부파일 -->
+                                        <div class="attach">
+                                                <span class="wrap_ic_attach">
+                                                    <span class="ic_attach">
+                                                        <span class="ic ic_arrow_down2"></span>
+                                                    </span>
+                                                </span>
+                                            <div class="attach_info">
+                                                <span class="attach_name" href="">다운 전.pptx</span>
+                                                <span class="attach_size" href="">123.12MB</span>
+                                                <div class="meta">
+                                                    <span class="user">이경희</span>
+                                                    <span class="part">|</span>
+                                                    <span class="date">07-18</span>
+                                                    <span class="part">|</span>
+                                                    <span class="size">432 KB</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- //첨부파일 -->
+                                        <div class="optional">
+                                            <button class="btn_more" title="메뉴">
+                                                <span class="ic ic_more"></span>
+                                                <ul class="dropdown_menu" style="display:">
+                                                    <li>
+                                                        <a>
+                                                            <span class="txt">저장</span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a>
+                                                            <span class="txt">다름 이름으로 저장</span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </button>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <!-- 첨부파일 -->
+                                        <div class="attach">
+                                                <span class="wrap_ic_attach">
+                                                    <span class="ic_attach">
+                                                        <span class="spinner"></span>
+                                                        <span class="ic ic_x_type2"></span>
+                                                    </span>
+                                                </span>
+                                            <div class="attach_info">
+                                                <span class="attach_name" href="">다운 중.pptx</span>
+                                                <div class="meta">
+                                                    <span class="user">이경희</span>
+                                                    <span class="part">|</span>
+                                                    <span class="date">07-18</span>
+                                                    <span class="part">|</span>
+                                                    <span class="size">432 KB</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- //첨부파일 -->
+                                        <div class="optional">
+                                            <button class="btn_more" title="메뉴">
+                                                <span class="ic ic_more"></span>
+                                                <ul class="dropdown_menu" style="display: none">
+                                                    <li>
+                                                        <a>
+                                                            <span class="txt">저장</span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a>
+                                                            <span class="txt">다름 이름으로 저장 다름 이름으로 저장</span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </button>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <!-- 첨부파일 -->
+                                        <div class="attach">
+                                                <span class="wrap_ic_attach">
+                                                    <span class="ic_attach">
+                                                        <span class="spinner_complete"></span>
+                                                        <span class="ic_file_s pdf"></span>
+                                                    </span>
+                                                </span>
+                                            <div class="attach_info">
+                                                <span class="attach_name" href="">파일명이 길어 졌을 때 연출입니다.pptx</span>
+                                                <div class="meta">
+                                                    <span class="user">이름이 길어 졌을때 연출입니다</span>
+                                                    <span class="part">|</span>
+                                                    <span class="date">07-18</span>
+                                                    <span class="part">|</span>
+                                                    <span class="size">432 KB</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- //첨부파일 -->
+                                        <div class="optional">
+                                            <button class="btn_more" title="메뉴">
+                                                <span class="ic ic_more"></span>
+                                                <ul class="dropdown_menu" style="display: none">
+                                                    <li>
+                                                        <a>
+                                                            <span class="txt">저장</span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a>
+                                                            <span class="txt">다름 이름으로 저장 다름 이름으로 저장</span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </button>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <a class="btn_attach_more">
+                                    <span class="txt">첨부파일 더보기</span>
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                    <!-- //대화 검색 전 -->
+                    <!-- 대화 검색 후 -->
+                    <ul class="list list_msg_opt blind">
+                        <li class="wrap_oganization">
+                            <div class="tit">
+                                <span class="txt">5</span>
+                                <span class="txt">개의 메세지를 찾았습니다.</span>
+                            </div>
+                            <ul class="list list_oganization depth">
+                                <li>
+                                    <div class="member">
+                                        <a class="photo" href="#">
+                                            <img title="이천금 주임연구원" src="../assets/skin/images/photo_profile_1.jpg" data-pin-nopin="true" alt="">
+                                        </a>
+                                        <div class="info">
+                                            <div class="main">
+                                                        <span class="name">
+                                                            <strong>이경욱</strong>
+                                                        </span>
+                                            </div>
+                                            <span class="date">오후5:30</span>
+                                            <div class="sub">댈님 다우 클라우드 시안을 잡았습니다. 이거 맞나한번 봐주세요</div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="member">
+                                        <a class="photo" href="#">
+                                            <img title="이천금 주임연구원" src="../assets/skin/images/photo_profile_1.jpg" data-pin-nopin="true" alt="">
+                                        </a>
+                                        <div class="info">
+                                            <div class="main">
+                                                        <span class="name">
+                                                            <strong>이천금</strong>
+                                                        </span>
+                                                <span class="ic ic_me"></span>
+                                            </div>
+                                            <span class="date">오후5:30</span>
+                                            <div class="sub">댈님 다우 클라우드 시안을 잡았습니다. 이거 맞나한번 봐주세요</div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="member">
+                                        <a class="photo" href="#">
+                                            <img title="이천금 주임연구원" src="../assets/skin/images/photo_profile_1.jpg" data-pin-nopin="true" alt="">
+                                        </a>
+                                        <div class="info">
+                                            <div class="main">
+                                                        <span class="name">
+                                                            <strong>이경욱</strong>
+                                                        </span>
+                                            </div>
+                                            <span class="date">오후5:30</span>
+                                            <div class="sub">댈님 다우 클라우드 시안을 잡았습니다. 이거 맞나한번 봐주세요</div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="member">
+                                        <a class="photo" href="#">
+                                            <img title="이천금 주임연구원" src="../assets/skin/images/photo_profile_1.jpg" data-pin-nopin="true" alt="">
+                                        </a>
+                                        <div class="info">
+                                            <div class="main">
+                                                        <span class="name">
+                                                            <strong>이경욱</strong>
+                                                        </span>
+                                            </div>
+                                            <span class="date">오후5:30</span>
+                                            <div class="sub">댈님 다우 클라우드 시안을 잡았습니다. 이거 맞나한번 봐주세요</div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="member">
+                                        <a class="photo" href="#">
+                                            <img title="이천금 주임연구원" src="../assets/skin/images/photo_profile_1.jpg" data-pin-nopin="true" alt="">
+                                        </a>
+                                        <div class="info">
+                                            <div class="main">
+                                                        <span class="name">
+                                                            <strong>이경욱</strong>
+                                                        </span>
+                                            </div>
+                                            <span class="date">오후5:30</span>
+                                            <div class="sub">댈님 다우 클라우드 시안을 잡았습니다. 이거 맞나한번 봐주세요</div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <!-- //대화 검색 후 -->
+                </div>
+            </div>
+            <!-- //메시지 옵션 -->
+        </div>
+    </div>
+    <!-- //msn-->
+</div>
