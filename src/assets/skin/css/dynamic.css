@@ -1,0 +1,6 @@
+.gnb>li>a:hover {
+    background: var(--sidebar-hover-color);
+}
+.msn .wrapper .wrap_gnb .gnb_more>li>a:hover {
+    background: var(--sidebar-hover-color);
+}

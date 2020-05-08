@@ -1,0 +1,9 @@
+div.msn.on {
+    position : static;
+}
+div.wrapper {
+    width : 1023px;
+    height : 700px;
+    border-right : 1px solid #999;
+    border-bottom : 1px solid #999 !important;
+}

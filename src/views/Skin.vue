@@ -1,38 +1,37 @@
 <template src="../assets/messenger.html">
 </template>
 <script>
-    import { mapGetters } from 'vuex'
+    //import { mapGetters } from 'vuex'
     export default {
         name: "Skin",
-        /*data: function() {
-            return {
-                hoverColor : this.$store.getters.getSideBarColor
-            };
-        },
         computed: {
+            cssProps() {
+              return {
+                    '--sidebar-hover-color' : this.$store.getters.getSideBarHoverColor
+              }
+            },
+            getTitleBarTextColor() {
+                return this.$store.getters.getTitleBarTextColor;
+            },
+            getTitleBarColor() {
+                return this.$store.getters.getTitleBarColor;
+            },
             getSideBarColor() {
-                return this.$store.getters.getSideBarColor
+                return this.$store.getters.getSideBarColor;
             },
             getSideBarHoverColor() {
-                return this.$store.getters.getSideBarHoverColor
+                return this.$store.getters.getSideBarHoverColor;
             }
-        }*/
-        computed : mapGetters([
+        }
+        /*computed : mapGetters([
             'getSideBarColor',
             'getSideBarHoverColor'
-        ])
+        ])*/
     };
 </script>
 <style>
     @import '../assets/skin/css/go_messenger.css';
     @import '../assets/skin/css/go_messenger_d.css';
-    div.msn.on {
-        position : static;
-    }
-    div.wrapper {
-        width : 1023px;
-        height : 700px;
-        border-right : 1px solid #999;
-        border-bottom : 1px solid #999 !important;
-    }
+    @import '../assets/skin/css/custom.css';
+    @import '../assets/skin/css/dynamic.css';
 </style>

@@ -1,14 +1,14 @@
-<div style="width:1024px">
+<div style="width:1024px" :style="cssProps">
     <div class="msn on">
-        <div class="header">
+        <div class="header" :style="{'background' : getTitleBarColor}">
             <div class="loadbar"></div>
             <h1>
-                <img src="../assets/skin/images/logo.png" alt=""><span class="txt">DaouOffice</span>
+                <img src="../assets/skin/images/logo.png" alt=""><span class="txt" :style="{'color' : getTitleBarTextColor}">DaouOffice</span>
             </h1>
-            <div class="win_func">
+            <div class="win_func" :style="{'background' : getTitleBarColor}">
                 <input class="range_trans" type="range" min="1" max="100" title="투명도">
                 <a class="btn_win_min" href="" title="최소화">
-                    <span class="ic ic_win_min"></span>
+                    <span class="ic ic_win_min" style="-webkit-filter: invert(14%) sepia(52%) saturate(5512%) hue-rotate(352deg) brightness(99%) contrast(105%);"></span>
                 </a>
                 <a class="btn_win_max" href="" title="최대화">
                     <span class="ic ic_win_max"></span>
@@ -26,7 +26,7 @@
         <div class="filebox_result"></div>
         <div class="wrapper">
             <div class="layer_modal blind"></div>
-            <div class="wrap_gnb" :style="{'background': getSideBarColor}">
+            <div class="wrap_gnb" :style="{'background' : getSideBarColor}">
                 <a class="photo" href="#">
                     <img title="이경희 선임연구원" src="../assets/skin/images/photo_profile.jpg" data-pin-nopin="true" alt="">
                 </a>
