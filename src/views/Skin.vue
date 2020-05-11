@@ -1,9 +1,14 @@
-<template src="../assets/messenger.html">
+<template src="../../public/messenger.html">
 </template>
 <script>
     //import { mapGetters } from 'vuex'
     export default {
         name: "Skin",
+        data () {
+            return {
+                publicPath: process.env.BASE_URL
+            }
+        },
         computed: {
             cssProps() {
               return {
@@ -30,8 +35,8 @@
     };
 </script>
 <style>
-    @import '../assets/skin/css/go_messenger.css';
-    @import '../assets/skin/css/go_messenger_d.css';
-    @import '../assets/skin/css/custom.css';
-    @import '../assets/skin/css/dynamic.css';
+    @import '../../public/skin/css/go_messenger.css';
+    @import '../../public/skin/css/go_messenger_d.css';
+    @import '../../public/skin/css/custom.css';
+    @import '../../public/skin/css/dynamic.css';
 </style>

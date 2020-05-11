@@ -1,7 +1,8 @@
 <template>
   <div class="home">
-    <Skin/>
-    <Color/>
+    <div><Skin/></div>
+    <div><Color/></div>
+
   </div>
 </template>
 
@@ -16,3 +17,9 @@ export default {
   }
 };
 </script>
+<style>
+  div.home {
+    min-width : 1300px;
+    overflow : scroll;
+  }
+</style>

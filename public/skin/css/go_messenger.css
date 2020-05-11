@@ -4,7 +4,7 @@ body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,form,fieldset,p,button,input,figure {m
 input, textarea, select {font-size:13px; color:#333; letter-spacing: -0.5px}
 body,input, select {white-space:normal; word-break:break-all; }
 h1 {font-size:19px; display: inline-block}
-body{overflow:hidden;}
+/*body{overflow:hidden;}*/
 h2 {font-size:17px; display: inline-block; font-weight: normal; color: #000}
 h3 {font-size:17px; display: inline-block; font-weight: normal; color: #000}
 input,select,button{vertical-align:middle}
