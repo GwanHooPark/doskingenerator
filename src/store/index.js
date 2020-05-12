@@ -5,13 +5,19 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
+    testColor : '#999',
     titleBarTextColor: '#000',
     titleBarColor: '#fff',
     sideBarColor: '#02a1c0',
     sideBarHoverColor: '#0198ae'
   },
   getters: {
+    getTestColor: function(state) {
+      console.log("getTestColor:"+state.testColor)
+      return state.testColor;
+    },
     getTitleBarTextColor: function(state) {
+      console.log("getTitleBarTextColor:"+state.titleBarTextColor)
       return state.titleBarTextColor;
     },
     getTitleBarColor: function(state) {
@@ -25,6 +31,9 @@ export default new Vuex.Store({
     }
   },
   mutations: {
+    updateTestColor: function(state,color){
+      state.testColor = color;
+    },
     updateTitleBarTextColor: function(state, color){
       state.titleBarTextColor = color;
     },
