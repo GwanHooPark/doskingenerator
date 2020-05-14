@@ -1,32 +1,22 @@
 <template>
     <div data-type="titleBarTextColor" class="color">
-        <div class="close-picker">
-            <input v-on:focus="closePicker" type="text" maxlength="7"  :value="getTestColor('titleBarTextColor')" @keyup="keyPressTestColor($event,'titleBarTextColor')"/>
-            <button class="fg-color-sample" v-on:click="toggle" v-bind:style="{ background: getTestColor('titleBarTextColor') }"></button>
-            <winodw-chrome-picker :value="getTestColor('titleBarTextColor')" @input="updateType" />
-        </div>
-        <br>
        <div class="close-picker">
-           <input v-on:focus="closePicker" type="text" maxlength="7"  :value="getTitleBarTextColor" @keyup="keyPressTitleBarTextColor"/>
-           <button class="fg-color-sample" v-on:click="toggle" v-bind:style="{ background: getTitleBarTextColor }"></button>
+           타이틀 <button class="fg-color-sample" v-on:click="toggle" v-bind:style="{ background: getTitleBarTextColor }"></button>
            <window-titlebartext-picker :value="getTitleBarTextColor" @input="updateTitleBarTextColor" />
         </div>
         <br>
         <div class="close-picker">
-            <input type="text" maxlength="7"  v-model="getTitleBarColor"/>
-            <button class="fg-color-sample" v-on:click="toggle" v-bind:style="{ background: getTitleBarColor }"></button>
+            타이틀 헤더 <button class="fg-color-sample" v-on:click="toggle" v-bind:style="{ background: getTitleBarColor }"></button>
             <window-titlebar-picker :value="titleBarColor" @input="updateTitleBarColor" />
         </div>
         <br>
         <div class="close-picker">
-            <input type="text" maxlength="7"  v-model="getSideBarColor"/>
-            <button class="fg-color-sample" v-on:click="toggle" v-bind:style="{ background: getSideBarColor }"></button>
+            사이드 바 <button class="fg-color-sample" v-on:click="toggle" v-bind:style="{ background: getSideBarColor }"></button>
             <sidebar-picker :value="sideBarColor" @input="updatesideBarColor" />
         </div>
         <br>
         <div class="close-picker">
-            <input type="text" maxlength="7"  v-model="getSideBarHoverColor"/>
-            <button class="fg-color-sample" v-on:click="toggle" v-bind:style="{ background: getSideBarHoverColor }"></button>
+            사이드바 호버 <button class="fg-color-sample" v-on:click="toggle" v-bind:style="{ background: getSideBarHoverColor }"></button>
             <sidebar-hover-picker :value="sideBarHoverColor" @input="updatesideBarHoverColor" />
         </div>
     </div>
@@ -36,7 +26,6 @@
     import { Chrome } from 'vue-color'
     export default {
         components: {
-            'winodw-chrome-picker' : Chrome,
             'window-titlebartext-picker' : Chrome,
             'window-titlebar-picker' : Chrome,
             'sidebar-picker': Chrome,
@@ -73,28 +62,8 @@
             }
         },
         methods : {
-            updateType : function(value){
-                console.log("updateType");
-                console.log(value);
-                this.$store.commit('updateTitleBarTextColor',value.hex);
-            },
-            keyPressTestColor : function(event,type) {
-                console.log(type);
-                var value = {
-                    hex : ''
-                };
-                value.hex = event.currentTarget.value;
-                this.updateTestColor(value);
-            },
             updateTestColor : function(value) {
                 this.$store.commit('updateTestColor',value.hex);
-            },
-            keyPressTitleBarTextColor : function(event) {
-                var value = {
-                    hex : ''
-                };
-                value.hex = event.currentTarget.value;
-                this.updateTitleBarTextColor(value);
             },
             updateTitleBarTextColor : function(value){
                 console.log("updateTitleBarTextColor")
@@ -127,37 +96,34 @@
         height : 1700px;
         overflow-y : auto;
     }
-    input.color-input {
-        font-size: 11px;
-        color: #333;
-        width: 100%;
-        border-radius: 2px;
-        border: none;
-        box-shadow: inset 0 0 0 1px #dadada;
-        height: 21px;
-        text-align: center;
-    }
-
-    /*div.vc-chrome-fields-wrap {
-        display:none;
+    div.vc-chrome {
+        border : 1px solid #8C8989;
     }
     div.vc-chrome-color-wrap {
         display:none
     }
     div.vc-chrome-alpha-wrap {
         display:none;
-    }*/
+    }
+    span.vc-input__label {
+        display:none !important;
+    }
+    div.vc-chrome-toggle-btn {
+        display: none;
+    }
+    div.vc-chrome-fields-wrap {
+        padding:0;
+    }
+    div.vc-chrome-body {
+        padding:5px 15px 5px;
+    }
     .fg-color-sample {
         display: inline-block;
-        width: 23px;
-        height:23px;
+        width: 45px;
+        height:45px;
         border: 1px solid #a9a9a9;
-        border-left: none;
     }
     .close-picker div.vc-chrome{
-        display : none
-    }
-    button {
-        border :
+        display : none;
     }
 </style>

@@ -7,8 +7,8 @@
 </template>
 
 <script>
-import Skin from "@/views/Skin.vue";
-import Color from "@/views/Color.vue";
+import Skin from "@/components/Skin.vue";
+import Color from "@/components/Color.vue";
 export default {
   name: "Home",
   components: {
