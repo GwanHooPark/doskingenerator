@@ -7,47 +7,46 @@
         <br>
         <div class="close-picker">
             타이틀 헤더 <button class="fg-color-sample" v-on:click="toggle" v-bind:style="{ background: getTitleBarColor }"></button>
-            <window-titlebar-picker :value="titleBarColor" @input="updateTitleBarColor" />
+            <window-titlebar-picker :value="getTitleBarColor" @input="updateTitleBarColor" />
         </div>
         <br>
         <div class="close-picker">
             사이드 바 <button class="fg-color-sample" v-on:click="toggle" v-bind:style="{ background: getSideBarColor }"></button>
-            <sidebar-picker :value="sideBarColor" @input="updatesideBarColor" />
+            <sidebar-picker :value="getSideBarColor" @input="updateSideBarColor" />
         </div>
         <br>
         <div class="close-picker">
             사이드바 호버 <button class="fg-color-sample" v-on:click="toggle" v-bind:style="{ background: getSideBarHoverColor }"></button>
-            <sidebar-hover-picker :value="sideBarHoverColor" @input="updatesideBarHoverColor" />
+            <sidebar-hover-picker :value="getSideBarHoverColor" @input="updateSideBarHoverColor" />
         </div>
+        <br>
+       <component-colorpicker title="타이틀" get-func="getTitleBarTextColor" set-func="updateTitleBarTextColor"></component-colorpicker>
+       <component-colorpicker title="타이틀 헤더 " get-func="getTitleBarColor" set-func="updateTitleBarColor"></component-colorpicker>
+       <component-colorpicker title="사이드 바" get-func="getSideBarColor" set-func="updateSideBarColor"></component-colorpicker>
+       <component-colorpicker title="사이드바 호버" get-func="getSideBarHoverColor" set-func="updateSideBarHoverColor"></component-colorpicker>
     </div>
 </template>
 
 <script>
-    import { Chrome } from 'vue-color'
+    import { Chrome } from 'vue-color';
+    import ColorPicker from './ColorPicker.vue';
     export default {
         components: {
             'window-titlebartext-picker' : Chrome,
             'window-titlebar-picker' : Chrome,
             'sidebar-picker': Chrome,
-            'sidebar-hover-picker': Chrome
+            'sidebar-hover-picker': Chrome,
+            'component-colorpicker' : ColorPicker
         },
         data () {
             return {
-                testColor : this.$store.getters.getTestColor,
-                titleBarTextColor : this.$store.getters.getTitleBarTextColor,
+                /*titleBarTextColor : this.$store.getters.getTitleBarTextColor,
                 titleBarColor : this.$store.getters.getTitleBarColor,
                 sideBarColor : this.$store.getters.getSideBarColor,
-                sideBarHoverColor : this.$store.getters.getSideBarHoverColor,
-                isOpen : false
+                sideBarHoverColor : this.$store.getters.getSideBarHoverColor*/
             }
         },
         computed: {
-            getTestColor() {
-                return (type) => {
-                    console.log(type);
-                    return this.$store.getters.getType(type);
-                };
-            },
             getTitleBarTextColor : function() {
                 return this.$store.getters.getTitleBarTextColor;
             },
@@ -62,28 +61,20 @@
             }
         },
         methods : {
-            updateTestColor : function(value) {
-                this.$store.commit('updateTestColor',value.hex);
-            },
             updateTitleBarTextColor : function(value){
-                console.log("updateTitleBarTextColor")
-                console.log(value);
                 this.$store.commit('updateTitleBarTextColor',value.hex);
             },
             updateTitleBarColor : function(value){
                 this.$store.commit('updateTitleBarColor',value.hex);
             },
-            updatesideBarColor : function(value){
+            updateSideBarColor : function(value){
                 this.$store.commit('updateSideBarColor',value.hex);
             },
-            updatesideBarHoverColor : function(value){
+            updateSideBarHoverColor : function(value){
                 this.$store.commit('updateSideBarHoverColor',value.hex);
             },
             toggle: function(event) {
                 event.target.parentElement.classList.toggle('close-picker');
-            },
-            closePicker : function(event) {
-                event.target.parentElement.classList.add('close-picker');
             }
         }
     }
